@@ -40,7 +40,10 @@ extension UIImage {
     static let tabbarSettingsFilled = UIImage(named: "settings filled 23px")!.withRenderingMode(.alwaysTemplate)
     static let tabbarTimeline = UIImage(named: "timeline 23px")!.withRenderingMode(.alwaysTemplate)
     static let tabbarTimelineFilled = UIImage(named: "timeline filled 23px")!.withRenderingMode(.alwaysTemplate)
-    
+    static let tabbarInsurance = UIImage(named: "shield 23px")!.withRenderingMode(.alwaysTemplate)
+    static let tabbarInsuranceFilled = UIImage(named: "shield 23px")!.withRenderingMode(.alwaysTemplate)
+    //need to figure out the filled shield image ^^^^^^
+
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
       let rect = CGRect(origin: .zero, size: size)
       UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
