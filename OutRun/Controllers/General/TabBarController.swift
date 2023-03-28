@@ -45,7 +45,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         
         // Create a reference to the the appropriate storyboard
-        let storyboard = UIStoryboard(name: "testStoryboard", bundle: nil)
+        let storyboard = UIStoryboard(name: "InsuranceStoryboard", bundle: nil)
 
         // Instantiate the desired view controller from the storyboard using the view controllers identifier
         // Cast is as the custom view controller type you created in order to access it's properties and methods
@@ -59,14 +59,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             selectedImage: .tabbarInsuranceFilled
         )
 
-        let listControllerLeft = WorkoutListViewController()
-        let timelineLeft = NavigationController(rootViewController: listControllerLeft)
-        timelineLeft.tabBarItem = UITabBarItem(
+        let walletController = WalletVC()
+        let wallet = NavigationController(rootViewController: walletController)
+        wallet.tabBarItem = UITabBarItem(
             title: LS["TabBar.Timeline"],
             image: .tabbarTimeline,
             selectedImage: .tabbarTimelineFilled
         )
-        
+
         let settingsController = SettingsViewController()
         settingsController.settingsModelClosure = {
             return SettingsModel.main
@@ -79,7 +79,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         settings.tabBarItem = settingsTabBarItem
         
-        self.viewControllers = [timeline, timelineLeft, placeholder, insurance, settings] //3 icons for 3 tabs!!
+        self.viewControllers = [timeline, wallet, placeholder, insurance, settings]
         
         addButton.layer.cornerRadius = 29
         addButton.backgroundColor = .accentColor
