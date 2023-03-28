@@ -1,4 +1,4 @@
-//
+ //
 //  TabBarController.swift
 //
 //  OutRun
@@ -44,6 +44,29 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             selectedImage: .tabbarTimelineFilled
         )
         
+        // Create a reference to the the appropriate storyboard
+        let storyboard = UIStoryboard(name: "InsuranceStoryboard", bundle: nil)
+
+        // Instantiate the desired view controller from the storyboard using the view controllers identifier
+        // Cast is as the custom view controller type you created in order to access it's properties and methods
+        let insuranceController = storyboard.instantiateViewController(withIdentifier: "someID")
+        
+//        let insuranceController = InsuranceViewOldController()
+        let insurance = NavigationController(rootViewController: insuranceController)
+        insurance.tabBarItem = UITabBarItem(
+            title: "Insurance",
+            image: .tabbarInsurance,
+            selectedImage: .tabbarInsuranceFilled
+        )
+
+        let walletController = WalletVC()
+        let wallet = NavigationController(rootViewController: walletController)
+        wallet.tabBarItem = UITabBarItem(
+            title: LS["TabBar.Timeline"],
+            image: .tabbarTimeline,
+            selectedImage: .tabbarTimelineFilled
+        )
+
         let settingsController = SettingsViewController()
         settingsController.settingsModelClosure = {
             return SettingsModel.main
@@ -56,7 +79,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         )
         settings.tabBarItem = settingsTabBarItem
         
-        self.viewControllers = [timeline, placeholder, settings]
+        self.viewControllers = [timeline, wallet, placeholder, insurance, settings]
         
         addButton.layer.cornerRadius = 29
         addButton.backgroundColor = .accentColor
@@ -129,6 +152,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     @objc private func displayNewWorkoutAlert(sender: UILongPressGestureRecognizer) {
+        print("Long press detected")
         if sender.state == .began {
             let alert = WorkoutTypeAlert(
                 action: { (type) in
@@ -144,10 +168,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             alert.present(on: self)
         }
     }
-    
-    @objc private func showNewWorkoutController() {
+    @objc private func showNewWorkoutController() { //showNewWorkotuController is a button??
+        print("New Workout Button Pressed")
         let controller = NewWorkoutViewController()
-        self.showDetailViewController(controller, sender: self)
+//        let controller = AayushViewController()
+        self.showDetailViewController(controller, sender: self) //what does this do???
     }
     
     func addDebugGestureRecognizer() {

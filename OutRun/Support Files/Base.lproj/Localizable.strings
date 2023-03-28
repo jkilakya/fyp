@@ -189,7 +189,7 @@
 "Settings.MapVisibility" = "Show Map";
 "Settings.GPSAccuracy" = "GPS Accuracy";
 "Settings.GPSAccuracy.Title" = "Desired Accuracy";
-"Settings.GPSAccuracy.Text" = "When receiving GPS signals they are sent with a certain accuracy for determining if the data is adequate for use. Depending on how you set this filter will your recorded workouts vary in quality.\n\nIdeally the filter should stay at 'Standard', but should there be complications with your data (e.g. it being too inaccurate or everything being filtered out) you can try one of the others.";
+"Settings.GPSAccuracy.Text" = "Hello. I have cheekily reworded this.";
 "Settings.GPSAccuracy.Standard" = "Standard";
 "Settings.GPSAccuracy.High" = "High";
 "Settings.GPSAccuracy.Acceptable" = "Acceptable";
