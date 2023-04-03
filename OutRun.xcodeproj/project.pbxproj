@@ -180,6 +180,7 @@
 		456B5CF229D00A4700439872 /* InsuranceNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B5CF129D00A4700439872 /* InsuranceNewVC.swift */; };
 		4579A12229D33DDF003F6885 /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12129D33DDF003F6885 /* WalletVC.swift */; };
 		4579A12529D33EA6003F6885 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12429D33EA6003F6885 /* WalletView.swift */; };
+		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
 /* End PBXBuildFile section */
 
@@ -397,6 +398,7 @@
 		456B5CF129D00A4700439872 /* InsuranceNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceNewVC.swift; sourceTree = "<group>"; };
 		4579A12129D33DDF003F6885 /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		4579A12429D33EA6003F6885 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		45E7649D29D415C100EB571E /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -668,6 +670,7 @@
 				22B6CF7722CA11CA002D2FB0 /* Extensions */,
 				22EE6E952311EF90001D47CF /* Protocols */,
 				22B1F12722D6193A00C02973 /* Support Files */,
+				45E7649D29D415C100EB571E /* APIFunctions.swift */,
 			);
 			path = OutRun;
 			sourceTree = "<group>";
@@ -1279,6 +1282,7 @@
 				22623BFF22DFB811004065C6 /* WorkoutListHeader.swift in Sources */,
 				226E9A4923F00C0F00992815 /* TabBarSelectionObserver.swift in Sources */,
 				22585C20240AE0C70052E2CA /* Workout.swift in Sources */,
+				45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */,
 				22A6ED6B23E18271006A3DD0 /* PlaceholderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
