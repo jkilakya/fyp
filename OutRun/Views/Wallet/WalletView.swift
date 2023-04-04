@@ -21,7 +21,7 @@ struct WalletView: View {
     
     VStack(alignment: .leading, spacing: 3.0) {
     
-    Text("WALLET")
+    Text("      WALLET")
     .font(.title)
     .fontWeight(.bold)
     .foregroundColor(Color("accentColor"))
@@ -140,7 +140,7 @@ struct WalletView: View {
     
     Spacer()
     
-    Text("Previous Rewards")
+    Text("      Previous Rewards")
     .font(.title2)
     .fontWeight(.semibold)
     .foregroundColor(Color("secondaryColor"))

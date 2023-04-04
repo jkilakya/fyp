@@ -82,6 +82,8 @@ class SetupViewController: UIViewController {
             make.height.equalTo(30)
         }
         
+        /// here here
+        //self.scrollView.addSubview(questionsView)
         self.scrollView.addSubview(formalitiesView)
         self.scrollView.addSubview(userInfoView)
         self.scrollView.addSubview(appleHealthSyncView)
@@ -106,7 +108,12 @@ class SetupViewController: UIViewController {
             make.left.equalTo(appleHealthSyncView.snp.right).offset(40)
             make.width.equalTo(width - 40)
         }
-        
+//        questionsView.snp.makeConstraints { (make) in
+//            make.top.bottom.equalToSuperview().inset(edgeInset)
+//            make.left.equalTo(permissionsView.snp.right).offset(40)
+//            make.width.equalTo(width - 40)
+//        }
+//
     }
     
     @objc func nextButtonSelector() {
@@ -125,6 +132,8 @@ class SetupViewController: UIViewController {
                 case 3:
                     self.healthPermissionView?.isHidden = !(self.shouldSyncWeight || self.shouldSyncWorkouts)
                     self.toggleButtonStatusForPermissions()
+//                case 4:
+//                    self.nextButton.setTitle("Next", for: .normal)
                 default:
                     break
                 }
@@ -148,6 +157,10 @@ class SetupViewController: UIViewController {
                         prepareNewConstrains(forFirstView: self.userInfoView, secondView: self.appleHealthSyncView)
                     case 3:
                         prepareNewConstrains(forFirstView: self.appleHealthSyncView, secondView: self.permissionsView)
+                        
+//                    case 4:
+//                        prepareNewConstrains(forFirstView: self.permissionsView, secondView: self.questionsView)
+                        
                     default:
                         break
                     }
@@ -225,8 +238,11 @@ class SetupViewController: UIViewController {
         }
     }
     
+    
+//     here here
+    //lazy var questionsView = SetupView(title: "String", text: "String")
     lazy var formalitiesView = SetupView(
-        title: LS["Setup.Formalities.Title"],
+        title: "Policy",
         text: LS["Setup.Formalities.Message"],
         customViewClosure: { view -> UIView in
             
@@ -299,7 +315,7 @@ class SetupViewController: UIViewController {
             
             let nameField = SetupTextFieldView(
                 title: LS["Setup.UserInfo.Username"],
-                placeholder: LS["Setup.UserInfo.Username.Placeholder"],
+                placeholder: "Eg. John124",
                 textFieldAction: { (input) in
                     self.username = input
                 }
@@ -342,8 +358,16 @@ class SetupViewController: UIViewController {
                 }
             )
             
+            let systemSegEmail = SetupTextFieldView(
+                title: "Enter EmailID",
+                placeholder: "Eg. A@A.com",
+                textFieldAction: { (input) in
+                    self.username = input
+                })
+            
             view.addSubview(nameField)
             view.addSubview(systemSeg)
+            view.addSubview(systemSegEmail)
             view.addSubview(weightField!)
             
             let edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -351,8 +375,12 @@ class SetupViewController: UIViewController {
             nameField.snp.makeConstraints { (make) in
                 make.top.left.right.equalToSuperview().inset(edgeInset)
             }
-            systemSeg.snp.makeConstraints { (make) in
+            systemSegEmail.snp.makeConstraints { (make) in
                 make.top.equalTo(nameField.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+            }
+            systemSeg.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSegEmail.snp.bottom)
                 make.left.right.equalToSuperview().inset(edgeInset)
             }
             weightField!.snp.makeConstraints { (make) in
@@ -380,8 +408,8 @@ class SetupViewController: UIViewController {
     }
     
     lazy var appleHealthSyncView = SetupView(
-        title: LS["Setup.AppleHealth.Title"],
-        text: LS["Setup.AppleHealth.Message"],
+        title: "Questions",
+        text: "Some Questions we need to learn more about you. Choose the answer that is closest to your value. Also, preferably, allow access to sync workouts and weights below.",
         customViewClosure: { view -> UIView in
             
             let autoImport = SetupSwitchView(
@@ -391,6 +419,66 @@ class SetupViewController: UIViewController {
                     self.shouldAutoImportWorkouts = newStatus
                 }
             )
+            
+            let systemSeg2 = SetupTextFieldView(
+                title: "Yearly smoking",
+                placeholder: "eg. 50 times",
+                textFieldAction: { (input) in
+                    self.username = input
+                })
+            
+            let systemSeg3 = SetupTextFieldView(
+                title: "Yearly drinking",
+                placeholder: "eg. 50 times",
+                textFieldAction: { (input) in
+                    self.username = input
+                })
+            
+            let systemSeg4 = SetupSegementedControlView(
+                title: "Are you pregnant",
+                segmentTitles: ["Yes","No"],
+                initialSegment: 0,
+                segmentedControlAction: { selectedIndex in
+                    print("Selected index: \(selectedIndex)")
+                }, buttonAction: {
+                    print("Button tapped")
+                })
+            
+            let systemSeg5 = SetupTextFieldView(
+                title: "Name health problems",
+                placeholder: "eg. Asthma",
+                textFieldAction: { (input) in
+                    self.username = input
+                })
+            
+            let systemSeg6 = SetupSegementedControlView(
+                title: "Recent big Injury",
+                segmentTitles: ["Yes","No"],
+                initialSegment: 0,
+                segmentedControlAction: { selectedIndex in
+                    print("Selected index: \(selectedIndex)")
+                }, buttonAction: {
+                    print("Button tapped")
+                })
+            
+            let divider = UIView()
+            divider.backgroundColor = UIColor.black // set color to black or another desired color
+            divider.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                divider.heightAnchor.constraint(equalToConstant: 1)
+            ])
+            
+            let divider2 = UIView()
+            divider.backgroundColor = UIColor.black // set color to black or another desired color
+            divider.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                divider2.heightAnchor.constraint(equalToConstant: 1)
+            ])
+
+
+
             
             func toggleAutoImportOption() {
                 autoImport.switch.setOn(self.shouldSyncWorkouts ? self.shouldAutoImportWorkouts : false, animated: true)
@@ -405,6 +493,7 @@ class SetupViewController: UIViewController {
                 switchAction: { newStatus in
                     self.shouldSyncWorkouts = newStatus
                     self.changeNextButtonTitleAppropriatelyToAppleHealth()
+                    
                     toggleAutoImportOption()
                 }
             )
@@ -416,26 +505,75 @@ class SetupViewController: UIViewController {
                     self.changeNextButtonTitleAppropriatelyToAppleHealth()
                 }
             )
-            
+            view.addSubview(systemSeg2)
+            view.addSubview(systemSeg3)
+            view.addSubview(systemSeg4)
+            view.addSubview(systemSeg5)
+            view.addSubview(systemSeg6)
             view.addSubview(syncWorkouts)
             view.addSubview(syncWeight)
             view.addSubview(autoImport)
+            view.addSubview(divider)
+            view.addSubview(divider2)
+
+
             
-            let edgeInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            let edgeInset = UIEdgeInsets(top: 30, left: 10, bottom: 30, right: 10)
+            let edgeInset2 = UIEdgeInsets(top: 0, left: 10, bottom: 20, right: 10)
             
             syncWorkouts.snp.makeConstraints { (make) in
                 make.left.top.right.equalToSuperview().inset(edgeInset)
             }
+            
             syncWeight.snp.makeConstraints { (make) in
                 make.left.right.equalToSuperview().inset(edgeInset)
                 make.top.equalTo(syncWorkouts.snp.bottom)
             }
+            
+            
+            
             autoImport.snp.makeConstraints { (make) in
-                make.left.right.equalToSuperview().inset(edgeInset)
+                make.left.right.equalToSuperview().inset(edgeInset2)
                 make.top.equalTo(syncWeight.snp.bottom)
-                make.bottom.lessThanOrEqualToSuperview()
             }
             
+            divider.snp.makeConstraints { (make) in
+                make.left.right.equalToSuperview().inset(edgeInset2)
+                make.top.equalTo(autoImport.snp.bottom)
+            }
+            
+            systemSeg2.snp.makeConstraints { (make) in
+                make.top.equalTo(divider.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+            }
+            systemSeg3.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSeg2.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+            }
+            
+            systemSeg5.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSeg3.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+            }
+            
+            systemSeg4.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSeg5.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+            }
+            systemSeg6.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSeg4.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+
+            }
+            divider2.snp.makeConstraints { (make) in
+                make.top.equalTo(systemSeg6.snp.bottom)
+                make.left.right.equalToSuperview().inset(edgeInset)
+                make.bottom.lessThanOrEqualToSuperview()
+
+            }
+      
+
+      
             return view
         }
     )
@@ -546,6 +684,11 @@ class SetupViewController: UIViewController {
                     }
                 }
             )
+            
+            
+            
+            
+            
             
             view.addSubview(locationPermission)
             view.addSubview(motionPermission)

@@ -38,7 +38,14 @@ class InsuranceNewVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
+    @IBAction func clickClaimButton(_ sender: Any) {
+        print ("Claim button pressed. Firing up reward function")
+        let myfunctions = APIFunctions()
+        myfunctions.makeCryptoReward()
+        
+    }
+    
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {

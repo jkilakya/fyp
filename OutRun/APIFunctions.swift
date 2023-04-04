@@ -35,7 +35,7 @@ class APIFunctions {
         let accountSwift = "0x455E5AA18469bC6ccEF49594645666C587A3a71B"
         let monthCaloriesSwift = "3750"
         let percentageConsistencySwift = "0.5"
-        AF.request("http://172.20.10.2:8081/reward", method: .post, encoding: URLEncoding.httpBody, headers: [
+        AF.request("http://192.168.0.187:8081/reward", method: .post, encoding: URLEncoding.httpBody, headers: [
             "account": accountSwift,
             "monthCaloriesBurnt": monthCaloriesSwift,
             "percentageConsistency":percentageConsistencySwift]).responseJSON{
