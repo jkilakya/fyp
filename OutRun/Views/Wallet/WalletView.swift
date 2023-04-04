@@ -149,14 +149,19 @@ struct WalletView: View {
     
     ScrollView(.vertical){
     
-    VStack(alignment: .center, spacing: 10.0){
+    VStack(alignment: .center, spacing: 5.0){
     
     HStack( alignment: .center, spacing: 3.0){
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
+    Spacer()
     Text("January 2023")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
+    
+    Spacer()
+    
+    
     Text("+ 0 AKM")
     .font(.headline)
     .fontWeight(.semibold)
@@ -165,55 +170,79 @@ struct WalletView: View {
     .padding(.all)
     
     }
-    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
+    //.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
     Spacer()
     
     HStack( alignment: .center, spacing: 3.0){
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
+    Spacer()
+    
     Text("December 2022")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
+    
+    Spacer()
+    
     Text("+ 0 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)
-    .padding()
+    .padding(.all)
     
-    }.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
+    
+    }
+    //.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
     Spacer()
     
     HStack( alignment: .center, spacing: 3.0){
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
+    
+    Spacer()
+    
     Text("November 2022")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
+    
+    Spacer()
+    
     Text("+ 0 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)
-    .padding()
+    .padding(.all)
     
-    }.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
+    
+    }
+    //.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
     Spacer()
     
     HStack( alignment: .center, spacing: 3.0){
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
+    
+    Spacer()
+    
+    
     Text("October 2022")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
+    
+    Spacer()
+    
     Text("+ 0 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)
-    .padding()
+    .padding(.all)
+ 
     
-    }.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
+    }
+    //.background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
     
     }//end of bottom vstack
