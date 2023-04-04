@@ -19,6 +19,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
@@ -59,12 +60,18 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
             selectedImage: .tabbarInsuranceFilled
         )
 
-        let walletController = WalletVC()
-        let wallet = NavigationController(rootViewController: walletController)
+        //let walletController = WalletVC()
+        //1. import swiftUI and add these lines to render the SwiftUI view directly from here
+        let swiftUIViewController = UIHostingController(rootView: WalletView(onSwapView: false))
+        self.navigationController?.pushViewController(swiftUIViewController, animated: true)
+
+        let wallet = NavigationController(rootViewController: swiftUIViewController)
         wallet.tabBarItem = UITabBarItem(
-            title: LS["TabBar.Timeline"],
-            image: .tabbarTimeline,
-            selectedImage: .tabbarTimelineFilled
+            //title: LS["TabBar.Timeline"],
+            title: "Wallet",
+            image: UIImage(systemName: "bitcoinsign.circle"),
+            //selectedImage: .tabbarTimelineFilled
+            selectedImage: UIImage(systemName: "bitcoinsign.circle.filled")
         )
 
         let settingsController = SettingsViewController()

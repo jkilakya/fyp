@@ -13,6 +13,7 @@ target 'OutRun' do
   pod 'CoreStore', '~> 7.3.0'
   pod 'CoreGPX', '~> 0.8.1'
   pod 'Cache', '~> 6.0.0'
+  pod 'Alamofire'
   # pod 'JTAppleCalendar'
 
 end

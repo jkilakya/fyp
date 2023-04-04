@@ -78,6 +78,9 @@
                                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
                                                 <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="clickClaimButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JMs-EB-2hb"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

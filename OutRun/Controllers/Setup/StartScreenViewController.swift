@@ -29,7 +29,7 @@ class StartScreenViewController: UIViewController {
     )
     
     let titleLabel = UILabel(
-        text: LS["OutRun"],
+        text: LS["Arkam"],
         textColor: .accentColor,
         font: UIFont.systemFont(ofSize: 42, weight: .heavy).withLowerCaseSmallCaps,
         textAlignment: .center

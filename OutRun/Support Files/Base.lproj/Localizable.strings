@@ -20,7 +20,7 @@
 
 "TabBar.Timeline" = "Timeline";
 "TabBar.Settings" = "Settings";
-"OutRun" = "OutRun";
+"Arkam" = "Arkam";
 "Cancel" = "Cancel";
 "Save" = "Save";
 "Continue" = "Continue";
@@ -221,15 +221,15 @@
 "HKImport.ImportAll.Alert.Title" = "Import all Workouts?";
 "HKImport.ImportAll.Alert.Message" = "Do you want to Import all Apple Health Workout into OutRun, this may take some time?";
 "HKImport.ImportAll.Error" = "Some Apple Health Workouts could not be added, they will still appear in the list, please try again later.";
-"Setup.Headline" = "welcome to";
+"Setup.Headline" = "WELCOME TO";
 "Setup.Introduction" = "the running app that actually cares about your privacy, where you don't have to create a user account, or give sensitive data that then lies on a server in the middle of nowhere.\nBut more of that later for now let's just get started.";
 "Setup.StartButton" = "Let's go";
 "Setup.Feature.Route.Title" = "Accurate Tracking";
 "Setup.Feature.Route.Message" = "Record your running, walking or cycling workouts with the highest accuracy possible on your phone.";
-"Setup.Feature.Chart.Title" = "Detailed Statistics";
-"Setup.Feature.Chart.Message" = "Look at detailed statistics like top speed and your average pace after you finished your workout";
-"Setup.Feature.Lock.Title" = "Privacy Focused";
-"Setup.Feature.Lock.Message" = "Don't worry about your data, all of it stays on your device as long as you want it to.";
+"Setup.Feature.Chart.Title" = "Health Insurance";
+"Setup.Feature.Chart.Message" = "Digitally-native health insurance for the new generation";
+"Setup.Feature.Lock.Title" = "Web3.0";
+"Setup.Feature.Lock.Message" = "Earn cryptocurrency rewards or opt for a premium discount";
 "Setup.Formalities.Title" = "I guess let's start with the formalities";
 "Setup.Formalities.Message" = "This is the most boring part of the setup, so let's get it over with. If you don't want to read the policies (which we totally get) here is a really small summary: All your data is saved locally (with the exception of syncronization with Apple Health), so you stay in control of it and don't need to worry about any kind of leak or exploit.";
 "Setup.UserInfo.Title" = "But now let's talk about You";
