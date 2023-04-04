@@ -178,10 +178,10 @@
 		22FEA0B324CDE31E0007CA9C /* DebugController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FEA0B224CDE31E0007CA9C /* DebugController.swift */; };
 		456B5CF029CFF45F00439872 /* InsuranceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */; };
 		456B5CF229D00A4700439872 /* InsuranceNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B5CF129D00A4700439872 /* InsuranceNewVC.swift */; };
-		4579A12229D33DDF003F6885 /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12129D33DDF003F6885 /* WalletVC.swift */; };
 		4579A12529D33EA6003F6885 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12429D33EA6003F6885 /* WalletView.swift */; };
 		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
+		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -396,11 +396,11 @@
 		22FEA0B224CDE31E0007CA9C /* DebugController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugController.swift; sourceTree = "<group>"; };
 		456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsuranceStoryboard.storyboard; sourceTree = "<group>"; };
 		456B5CF129D00A4700439872 /* InsuranceNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceNewVC.swift; sourceTree = "<group>"; };
-		4579A12129D33DDF003F6885 /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
-		4579A12429D33EA6003F6885 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		4579A12429D33EA6003F6885 /* WalletView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; tabWidth = 1; wrapsLines = 1; };
 		45E7649D29D415C100EB571E /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
+		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -687,7 +687,6 @@
 		22B6CF7322CA0A1F002D2FB0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4579A12029D33DBC003F6885 /* Wallet */,
 				455B84B029CD4D2600990780 /* Insurance */,
 				2218436B24C75DAE00FDCC5E /* General */,
 				2252DEF22393969B00DF914D /* Setup */,
@@ -954,18 +953,11 @@
 			path = Insurance;
 			sourceTree = "<group>";
 		};
-		4579A12029D33DBC003F6885 /* Wallet */ = {
-			isa = PBXGroup;
-			children = (
-				4579A12129D33DDF003F6885 /* WalletVC.swift */,
-			);
-			path = Wallet;
-			sourceTree = "<group>";
-		};
 		4579A12329D33E96003F6885 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				4579A12429D33EA6003F6885 /* WalletView.swift */,
+				C2C452FE29DB3DBD00C2571A /* SwapView.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1008,7 +1000,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Tim Fraedrich";
 				TargetAttributes = {
 					22B6CF5222CA0814002D2FB0 = {
@@ -1122,6 +1114,7 @@
 				2250D11A239A70F700DE31A3 /* StartScreenFeatureView.swift in Sources */,
 				22CBE0D8244865500009D9A7 /* StatView.swift in Sources */,
 				2229056A24DDD81F0052ACFF /* WorkoutCompletionBanner.swift in Sources */,
+				C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */,
 				22A0B734245B341800E1AB68 /* TempWorkoutSeriesDataSampleType.swift in Sources */,
 				2273943C233BF6EA00176A07 /* WorkoutMapImageManager.swift in Sources */,
 				22AB2FB7233CC925002EF0DE /* UIImage.swift in Sources */,
@@ -1177,7 +1170,6 @@
 				22585C25240AE2210052E2CA /* OutRunV2.swift in Sources */,
 				22015319231663E300BD79AF /* UIViewController.swift in Sources */,
 				228187F42393990900400135 /* UILabel.swift in Sources */,
-				4579A12229D33DDF003F6885 /* WalletVC.swift in Sources */,
 				22FEA0B324CDE31E0007CA9C /* DebugController.swift in Sources */,
 				222AB94B243C725B000E8BB7 /* OutRunV3.swift in Sources */,
 				227EE7662349577F000C0D67 /* SettingsViewController.swift in Sources */,
@@ -1415,7 +1407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1472,7 +1464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1493,7 +1485,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S2H6W4WMN8;
 				INFOPLIST_FILE = "$(SRCROOT)/OutRun/Support Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1518,7 +1510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S2H6W4WMN8;
 				INFOPLIST_FILE = "$(SRCROOT)/OutRun/Support Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
