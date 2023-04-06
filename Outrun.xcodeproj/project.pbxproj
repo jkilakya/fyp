@@ -179,6 +179,9 @@
 		456B5CF029CFF45F00439872 /* InsuranceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */; };
 		456B5CF229D00A4700439872 /* InsuranceNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B5CF129D00A4700439872 /* InsuranceNewVC.swift */; };
 		4579A12529D33EA6003F6885 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12429D33EA6003F6885 /* WalletView.swift */; };
+		45AF137229DD6E5B0092176F /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45AF137129DD6E5B0092176F /* Rewards.storyboard */; };
+		45AF137429DD6EAE0092176F /* RewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF137329DD6EAE0092176F /* RewardsVC.swift */; };
+		45AF137629DE63230092176F /* LabelledDataViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF137529DE63230092176F /* LabelledDataViewCustom.swift */; };
 		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
 		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
@@ -316,7 +319,7 @@
 		22B2A8A0230D331000EF8558 /* WorkoutStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStats.swift; sourceTree = "<group>"; };
 		22B2A8A2230D350000EF8558 /* RelativeMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeMeasurement.swift; sourceTree = "<group>"; };
 		22B2A8A4230D3B7300EF8558 /* LabelledRelativeDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledRelativeDataView.swift; sourceTree = "<group>"; };
-		22B6CF5322CA0814002D2FB0 /* OutRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B6CF5322CA0814002D2FB0 /* Outrun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outrun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B6CF5622CA0814002D2FB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B6CF6022CA0815002D2FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22B6CF6C22CA0841002D2FB0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -397,6 +400,9 @@
 		456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsuranceStoryboard.storyboard; sourceTree = "<group>"; };
 		456B5CF129D00A4700439872 /* InsuranceNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceNewVC.swift; sourceTree = "<group>"; };
 		4579A12429D33EA6003F6885 /* WalletView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; tabWidth = 1; wrapsLines = 1; };
+		45AF137129DD6E5B0092176F /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
+		45AF137329DD6EAE0092176F /* RewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsVC.swift; sourceTree = "<group>"; };
+		45AF137529DE63230092176F /* LabelledDataViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDataViewCustom.swift; sourceTree = "<group>"; };
 		45E7649D29D415C100EB571E /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
@@ -655,7 +661,7 @@
 		22B6CF5422CA0814002D2FB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22B6CF5322CA0814002D2FB0 /* OutRun.app */,
+				22B6CF5322CA0814002D2FB0 /* Outrun.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -694,6 +700,8 @@
 				22A2D43223E31327003580EC /* Settings */,
 				2218436A24C75D5D00FDCC5E /* HealthKit */,
 				223EEF3524B1240400554126 /* Alerts */,
+				45AF137129DD6E5B0092176F /* Rewards.storyboard */,
+				45AF137329DD6EAE0092176F /* RewardsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -869,6 +877,7 @@
 			isa = PBXGroup;
 			children = (
 				22B6CF7B22CA1675002D2FB0 /* LabelledDataView.swift */,
+				45AF137529DE63230092176F /* LabelledDataViewCustom.swift */,
 				22B2A8A4230D3B7300EF8558 /* LabelledRelativeDataView.swift */,
 				22B2A89E230D2FC800EF8558 /* LabelledTimeView.swift */,
 				22B2A89C230D298F00EF8558 /* LabelledDiagramView.swift */,
@@ -974,9 +983,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22B6CF5222CA0814002D2FB0 /* OutRun */ = {
+		22B6CF5222CA0814002D2FB0 /* Outrun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22B6CF6822CA0815002D2FB0 /* Build configuration list for PBXNativeTarget "OutRun" */;
+			buildConfigurationList = 22B6CF6822CA0815002D2FB0 /* Build configuration list for PBXNativeTarget "Outrun" */;
 			buildPhases = (
 				6DFE581F30988E7B2871243C /* [CP] Check Pods Manifest.lock */,
 				22B6CF4F22CA0814002D2FB0 /* Sources */,
@@ -988,9 +997,9 @@
 			);
 			dependencies = (
 			);
-			name = OutRun;
+			name = Outrun;
 			productName = OutRun;
-			productReference = 22B6CF5322CA0814002D2FB0 /* OutRun.app */;
+			productReference = 22B6CF5322CA0814002D2FB0 /* Outrun.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1019,7 +1028,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 22B6CF4E22CA0814002D2FB0 /* Build configuration list for PBXProject "OutRun" */;
+			buildConfigurationList = 22B6CF4E22CA0814002D2FB0 /* Build configuration list for PBXProject "Outrun" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1045,7 +1054,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22B6CF5222CA0814002D2FB0 /* OutRun */,
+				22B6CF5222CA0814002D2FB0 /* Outrun */,
 			);
 		};
 /* End PBXProject section */
@@ -1056,6 +1065,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B1F13F22D61CF400C02973 /* LaunchScreen.storyboard in Resources */,
+				45AF137229DD6E5B0092176F /* Rewards.storyboard in Resources */,
 				2291863A23679AA300929885 /* InfoPlist.strings in Resources */,
 				22FAB3B4253BAC450040CBB1 /* Changelog.strings in Resources */,
 				22B1F14922D6246800C02973 /* Localizable.strings in Resources */,
@@ -1141,6 +1151,7 @@
 				22FEA0AF24CDD7B50007CA9C /* DiskStorage.swift in Sources */,
 				2230925F24D6F6A700A3F636 /* WorkoutBuilder+Status.swift in Sources */,
 				22623C0122DFBB71004065C6 /* Sequence.swift in Sources */,
+				45AF137429DD6EAE0092176F /* RewardsVC.swift in Sources */,
 				226E9A4B23F01E6E00992815 /* Date.swift in Sources */,
 				229FF4A1235C7F6300EA220E /* CustomMeasurementFormatting.swift in Sources */,
 				22003DFE23A9779D00EBCD05 /* SetupView.swift in Sources */,
@@ -1193,6 +1204,7 @@
 				2259A0292368D6EB00F70F96 /* HKWorkoutQueryObject.swift in Sources */,
 				22713F0522DE291F00EF50FB /* WorkoutListCell.swift in Sources */,
 				22D299372402BDE400F3F6B8 /* TimeIntervalPickerSetting.swift in Sources */,
+				45AF137629DE63230092176F /* LabelledDataViewCustom.swift in Sources */,
 				229186332367909D00929885 /* PolicyViewController.swift in Sources */,
 				22AB2FB1233CA201002EF0DE /* WorkoutMapViewDelegate.swift in Sources */,
 				22FEA09224CD38CB0007CA9C /* WorkoutBuilder+AutoPauseDetection.swift in Sources */,
@@ -1527,7 +1539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22B6CF4E22CA0814002D2FB0 /* Build configuration list for PBXProject "OutRun" */ = {
+		22B6CF4E22CA0814002D2FB0 /* Build configuration list for PBXProject "Outrun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B6CF6622CA0815002D2FB0 /* Debug */,
@@ -1536,7 +1548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22B6CF6822CA0815002D2FB0 /* Build configuration list for PBXNativeTarget "OutRun" */ = {
+		22B6CF6822CA0815002D2FB0 /* Build configuration list for PBXNativeTarget "Outrun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B6CF6922CA0815002D2FB0 /* Debug */,

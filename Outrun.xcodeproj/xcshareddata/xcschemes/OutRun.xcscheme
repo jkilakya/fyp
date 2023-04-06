@@ -17,7 +17,7 @@
                BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
                BuildableName = "OutRun.app"
                BlueprintName = "OutRun"
-               ReferencedContainer = "container:OutRun.xcodeproj">
+               ReferencedContainer = "container:Arkam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,7 +33,7 @@
             BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
             BuildableName = "OutRun.app"
             BlueprintName = "OutRun"
-            ReferencedContainer = "container:OutRun.xcodeproj">
+            ReferencedContainer = "container:Arkam.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -57,7 +57,7 @@
             BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
             BuildableName = "OutRun.app"
             BlueprintName = "OutRun"
-            ReferencedContainer = "container:OutRun.xcodeproj">
+            ReferencedContainer = "container:Arkam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
             BuildableName = "OutRun.app"
             BlueprintName = "OutRun"
-            ReferencedContainer = "container:OutRun.xcodeproj">
+            ReferencedContainer = "container:Arkam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
