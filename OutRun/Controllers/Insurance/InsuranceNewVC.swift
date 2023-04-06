@@ -20,10 +20,6 @@
 
 import UIKit
 
-protocol DataDelegate{
-    func handleReturn(returnValue: String)
-}
-
 class InsuranceNewVC: UITableViewController {
 
     
@@ -32,8 +28,6 @@ class InsuranceNewVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
-        APIFunctions.functions.delegate = self
-        APIFunctions.functions.fetchBalance()
         
         view.backgroundColor = .backgroundColor
         self.navigationItem.title = "Insurance"
@@ -55,8 +49,3 @@ class InsuranceNewVC: UITableViewController {
 
 }
 
-extension UITableViewController: DataDelegate{
-    func handleReturn(returnValue: String){
-        print("This is handled in another file! " + returnValue)
-    }
-}
