@@ -65,10 +65,10 @@ class APIFunctions {
     }
     
     func makeCryptoReward(){
-        let accountSwift = "0x455E5AA18469bC6ccEF49594645666C587A3a71B"
-        let monthCaloriesSwift = "3750"
-        let percentageConsistencySwift = "0.5"
-        AF.request("http://192.168.0.187:8081/reward", method: .post, encoding: URLEncoding.httpBody, headers: [
+        let accountSwift = "0xaF5958690bE8911412f7364e6953be6878C6967A"
+        let monthCaloriesSwift = "4000"
+        let percentageConsistencySwift = "0.6"
+        AF.request("http://10.70.46.98:8081/reward", method: .post, encoding: URLEncoding.httpBody, headers: [
             "account": accountSwift,
             "monthCaloriesBurnt": monthCaloriesSwift,
             "percentageConsistency":percentageConsistencySwift]).responseJSON{

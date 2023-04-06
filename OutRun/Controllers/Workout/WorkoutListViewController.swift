@@ -407,6 +407,9 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
 
     @objc func rewardTapped() {
         // Handle AKM crypto reward button
+        print("User wants to get crypto reward ")
+        let myfunctions = APIFunctions()
+        myfunctions.makeCryptoReward()
     }
 
     
