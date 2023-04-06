@@ -20,17 +20,30 @@
 
 import UIKit
 
-class InsuranceNewVC: UITableViewController {
+//protocol DataDelegate{
+//    func updateBal(newBal: String)
+//}
+
+class WalletVC: UITableViewController, DataDelegate {
+    func updateBal(newBal: String) {
+        print(newBal)
+    }
+    
 
     
-    @IBOutlet weak var makeClaimButton: UIButton!
+    //@IBOutlet weak var makeClaimButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
+        APIFunctions.functions.delegate = self
+        APIFunctions.functions.fetchBalance()
+        print("hello")
+        //super.viewDidLoad()
         view.backgroundColor = .backgroundColor
-        self.navigationItem.title = "Insurance"
-        makeClaimButton.layer.cornerRadius = 10
+        
+        var akmbal = ""
+        //self.navigationItem.title = "Insurance"
+        //makeClaimButton.layer.cornerRadius = 10
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,10 +52,6 @@ class InsuranceNewVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    @IBAction func clickClaimButton(_ sender: Any) {
-        print ("Claim button pressed. Firing up reward function")
-        let myfunctions = APIFunctions()
-        //myfunctions.fetchBalance()
         
     }
     
@@ -81,7 +90,7 @@ class InsuranceNewVC: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -110,4 +119,16 @@ class InsuranceNewVC: UITableViewController {
     }
     */
 
-}
+
+
+//extension UITableViewController: DataDelegate{
+//    func updateBal(newBal: String) {
+//        do{
+//             //akmbal = try JSONDecoder().decode()(String.self, from: newBal.data(using: .utf8)!)
+//            print(newBal)
+//        }
+//        catch{
+//            print("failed to decode")
+//        }
+//    }
+//}

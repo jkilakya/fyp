@@ -182,6 +182,7 @@
 		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
 		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
+		C2C4530229DD569600C2571A /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4530129DD569600C2571A /* WalletVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -401,6 +402,7 @@
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
 		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
+		C2C4530129DD569600C2571A /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -687,6 +689,7 @@
 		22B6CF7322CA0A1F002D2FB0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2C4530029DD568300C2571A /* Wallet */,
 				455B84B029CD4D2600990780 /* Insurance */,
 				2218436B24C75DAE00FDCC5E /* General */,
 				2252DEF22393969B00DF914D /* Setup */,
@@ -971,6 +974,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C2C4530029DD568300C2571A /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				C2C4530129DD569600C2571A /* WalletVC.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1240,6 +1251,7 @@
 				22D299352402B37E00F3F6B8 /* PickerSetting.swift in Sources */,
 				22BD1F42247463DF00415A06 /* ApplicationState.swift in Sources */,
 				22558387242E80FA0043432F /* PolicyManager.swift in Sources */,
+				C2C4530229DD569600C2571A /* WalletVC.swift in Sources */,
 				2298D2102345496600344989 /* OutRunV1.swift in Sources */,
 				225AC6A2243F2700008D493D /* WorkoutEvent.swift in Sources */,
 				229FF49E235C32D000EA220E /* SelectionSetting.swift in Sources */,
@@ -1483,7 +1495,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S2H6W4WMN8;
+				DEVELOPMENT_TEAM = 8P9Z7LWM7V;
 				INFOPLIST_FILE = "$(SRCROOT)/OutRun/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1491,7 +1503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tadris.OutRun.aayush;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tadris.OutRun.ilakya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1508,7 +1520,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S2H6W4WMN8;
+				DEVELOPMENT_TEAM = 8P9Z7LWM7V;
 				INFOPLIST_FILE = "$(SRCROOT)/OutRun/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1516,7 +1528,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.3;
-				PRODUCT_BUNDLE_IDENTIFIER = de.tadris.OutRun.aayush;
+				PRODUCT_BUNDLE_IDENTIFIER = de.tadris.OutRun.ilakya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -8,13 +8,38 @@
 import SwiftUI
 import UIKit
 
+protocol DataDelegate{
+    func updateBal(newBal: String)
+}
 
-struct WalletView: View {
-    
+
+struct WalletView: View, DataDelegate {
+func updateBal(newBal: String) {
+      print(newBal)
+      AKMbal = newBal
+}
+
+
     @State var onSwapView = false // Step 2
-    
-    
-    var body: some View {
+
+    @State var AKMbal = ""
+
+     
+
+func getAKMbal()  {
+
+APIFunctions.functions.delegate = self
+APIFunctions.functions.fetchBalance()
+print("hello")
+var akmbal = ""
+
+//func getAKMbal() async  {
+let myobj = APIFunctions()
+AKMbal =   myobj.rollDice()
+
+}
+     
+var body: some View {
         
        
     NavigationView{ // Step 1
@@ -45,8 +70,23 @@ struct WalletView: View {
     .multilineTextAlignment(.center)
     .padding(.all)
     
-    Text("0 AKM + 1000 USDC")
-    .font(.largeTitle)
+    
+    //we want to fetch the data from the API call
+    //make a call to API functions
+    
+    
+//    Text(AKMbal)
+//    .onAppear(perform:getAKMbal)
+
+    Text(AKMbal)
+    .onAppear(perform: getAKMbal
+    
+    )
+    
+    
+    //Text("0 AKM + 1000 USDC")
+    //.font(.largeTitle)
+    .font(.title2)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.center)
     .padding([.leading, .bottom, .trailing])
@@ -281,3 +321,15 @@ struct WalletView_Previews: PreviewProvider {
         //WalletView(onSwapView: false)
     }
 }
+
+//extension UITableViewController: DataDelegate{
+//    func updateBal(newBal: String) {
+//        do{
+//             //akmbal = try JSONDecoder().decode()(String.self, from: newBal.data(using: .utf8)!)
+//            print(newBal)
+//        }
+//        catch{
+//            print("failed to decode")
+//        }
+//    }
+//}

@@ -22,13 +22,46 @@ import Foundation
 import Alamofire
 
 class APIFunctions {
+    
+    var delegate: DataDelegate?
+    static let functions = APIFunctions()
+    
+     var akmbal: Any = "..."
 
-    func fetchBalance(){
-        AF.request("http://172.20.10.2:8081/fetch").response { response in
-            print(response.data!)
+//    func fetchBalance(){
+//        AF.request("http://10.68.64.138:8081/fetch").response { response in
+//            print(response.data!)
+//            let data = String(data: response.data!, encoding: .utf8)
+//            print(data)
+//        }
+//    }
+    
+    
+    func rollDice() ->String{
+        print(akmbal)
+        fetchBalance()
+        print(akmbal)
+        return "\(self.akmbal)"
+        //return "smthh"
+    }
+    
+    
+    func fetchBalance() {
+        AF.request("http://10.70.46.98:8081/fetch").response { response in
+            //print(response.data!)
             let data = String(data: response.data!, encoding: .utf8)
-            print(data)
+            //print(data)
+            self.akmbal = data
+            
+            
+            
+            self.delegate?.updateBal(newBal: data!)
+           
+            
+            
         }
+        
+        //return data
     }
     
     func makeCryptoReward(){
@@ -46,4 +79,6 @@ class APIFunctions {
                 
             }
     }
+    
+    
 }
