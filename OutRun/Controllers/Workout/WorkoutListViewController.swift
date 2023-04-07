@@ -317,7 +317,8 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         // Configure the constraints for the StatsView
         statsView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().inset(120)
-            make.left.right.equalToSuperview().inset(20)
+            //make.left.right.equalToSuperview().inset(20)
+            make.left.equalTo(detailVC.view.snp.centerX).offset(-200)
             make.bottom.equalToSuperview().inset(50)
         }
         
@@ -369,30 +370,45 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         //detailVC.view.addSubview(reductionButton)
         detailVC.view.addSubview(rewardButton)
         
+
+
+//        let hoverStyles = """
+//            button:hover {
+//                color: grey;
+//                background-color: lightgrey;
+//            }
+//        """
+//
+//
+//        let style = "<style>\n\(hoverStyles)\n</style>"
+//        let htmlString = "<html>\n<head>\(style)</head>\n<body></body>\n</html>"
+//
+//        guard let data = htmlString.data(using: .utf8) else { return }
+//        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [.documentType: NSAttributedString.DocumentType.html]
+//        let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
+//
+//        reductionButton.setAttributedTitle(attributedString, for: .highlighted)
+//        rewardButton.setAttributedTitle(attributedString, for: .highlighted)
+        
         
         reductionButton.snp.makeConstraints { (make) in
             make.top.equalTo(overallrewardview.snp.bottom).offset(20)
             make.left.equalToSuperview().offset(20)
-            make.width.equalTo(180)
+            make.width.equalTo(170)
             make.height.equalTo(40)
          }
         
         rewardButton.snp.makeConstraints { (make) in
             make.top.equalTo(overallrewardview.snp.bottom).offset(20)
             make.right.equalToSuperview().offset(-20)
-            make.width.equalTo(180)
+            make.width.equalTo(170)
             make.height.equalTo(40)
          }
 
+//
+//        reductionButton.addTarget(self, action: #selector(buttonHover(_:)), for: .touchDragEnter)
+//        rewardButton.addTarget(self, action: #selector(buttonHover(_:)), for: .touchDragEnter)
 
-        
-        
-
-
-
-        
-        
-        
         
 
         self.view.layoutIfNeeded()
@@ -401,20 +417,30 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         
     }
     
-    @objc func reductionTapped() {
-        // insurance premium button activity
+    @objc func reductionTapped(_ sender: UIButton) {
+//        if sender.isTouchInside {
+//            sender.backgroundColor = .red
+//        }
+//        else {
+//            sender.backgroundColor = .orange // set to original color
+//        }
     }
 
-    @objc func rewardTapped() {
+    @objc func rewardTapped(_ sender: UIButton) {
         // Handle AKM crypto reward button
         print("User wants to get crypto reward ")
         let myfunctions = APIFunctions()
         myfunctions.makeCryptoReward()
+        
+//        if sender.isTouchInside {
+//            sender.backgroundColor = .red
+//        }
+//        else {
+//            sender.backgroundColor = .orange // set to original color
+//        }
     }
+    
 
-    
-    
-    
     func refetchWithFilters() {
         
         let filterClauses = filterTypes.map { (type) -> Where<Workout> in
@@ -426,5 +452,4 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
     }
     
 }
-
 
