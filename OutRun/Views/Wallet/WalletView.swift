@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import Glaip
 
 protocol DataDelegate{
     func updateBal(newBal: String)
@@ -24,6 +25,11 @@ func updateBal(newBal: String) {
 
     @State var AKMbal = ""
 
+@ObservedObject private var glaip = Glaip(
+     title: "Glaip Demo App",
+     description: "Demo app to demonstrate Web3 login",
+     supportedWallets: [.MetaMask])
+
      
 
 func getAKMbal()  {
@@ -35,6 +41,7 @@ var akmbal = ""
 
 //func getAKMbal() async  {
 let myobj = APIFunctions()
+//AKMbal = "for now"
 AKMbal =   myobj.rollDice()
 
 }
@@ -42,7 +49,7 @@ AKMbal =   myobj.rollDice()
 var body: some View {
         
        
-    NavigationView{ // Step 1
+    //NavigationView{ // Step 1
     
     VStack(alignment: .leading, spacing: 3.0) {
     
@@ -58,13 +65,13 @@ var body: some View {
     
     VStack(alignment: .center, spacing: 10.0){
     
-    // Step 3
-    NavigationLink(destination: SwapView(), isActive: $onSwapView) { EmptyView() }
+//    // Step 3
+//    NavigationLink(destination: SwapView(), isActive: $onSwapView) { EmptyView() }
     
     
     
     Text("Available Balance")
-    .font(.title2)
+    .font(.title)
     .fontWeight(.semibold)
     .foregroundColor(Color("secondaryColor"))
     .multilineTextAlignment(.center)
@@ -98,6 +105,16 @@ var body: some View {
     
     if #available(iOS 14.0, *) {
     Button {
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
+    
     print("Deposit button was tapped")
     } label: {
     if #available(iOS 14.0, *) {
@@ -122,10 +139,21 @@ var body: some View {
     
     if #available(iOS 14.0, *) {
     Button {
+    
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
     print("Swap button was tapped")
     //insert code to jump to swapView here
     
     self.onSwapView = true // Step 4
+    
     
     
     } label: {
@@ -147,6 +175,16 @@ var body: some View {
     
     if #available(iOS 14.0, *) {
     Button {
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
+    
     print("Withdraw button was tapped")
     } label: {
     if #available(iOS 14.0, *) {
@@ -170,20 +208,14 @@ var body: some View {
     }
     .padding(.all)//end of buttons HStack
     
-    }
-    .padding(.all)
-    .accentColor(/*@START_MENU_TOKEN@*/.orange/*@END_MENU_TOKEN@*/)
-    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
-    
-    //end of top VStack
-    
+    //inserting here
     Spacer()
     
-    Text("      Previous Rewards")
-    .font(.title2)
+    Text("Previous Rewards")
+    .font(.title3)
     .fontWeight(.semibold)
-    .foregroundColor(Color("secondaryColor"))
+    .foregroundColor(Color.black)
     .multilineTextAlignment(.center)
     .padding(.all)
     
@@ -295,6 +327,17 @@ var body: some View {
     
     
     Spacer()
+    //inserting here ends**********8
+    
+    }
+    .padding(.all)
+    .accentColor(/*@START_MENU_TOKEN@*/.orange/*@END_MENU_TOKEN@*/)
+    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+    
+    //******************************************************
+    //end of top VStack
+    
+    
     
     
     }
@@ -302,7 +345,7 @@ var body: some View {
     
     //end of main VStack
     
-    }
+    //}
     //.navigationBarTitle("")
     .navigationBarHidden(true)
     
