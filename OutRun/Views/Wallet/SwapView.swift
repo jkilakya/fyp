@@ -19,12 +19,19 @@
 //
 
 import SwiftUI
+import Glaip
 
 struct SwapView: View {
+    
+@ObservedObject private var glp = Glaip(
+         title: "Glaip Demo App",
+         description: "Demo app to demonstrate Web3 login",
+         supportedWallets: [.MetaMask])
     
     @State var value = ""
     @State  var fromCurr = "USDC"
     @State  var toCurr = "AKM"
+
     
     
     var body: some View {
@@ -132,8 +139,22 @@ struct SwapView: View {
             
             
           //Button begins here
-                if #available(iOS 14.0, *) {
+                if #available(iOS 13.0, *) {
                     Button {
+                        //using glaip to connect to metamask
+                       
+                        
+                        
+                        glp.loginUser(type: .MetaMask) { result in
+                          switch result {
+                          case .success(let user):
+                            print(user.wallet.address)
+                          case .failure(let error):
+                            print(error)
+                          }
+                        }
+                        
+                        
                         print("SWAP button was tapped")
                         print(value)
                     } label: {
