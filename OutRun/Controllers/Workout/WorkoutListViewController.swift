@@ -21,6 +21,8 @@
 import UIKit
 import CoreData
 import CoreStore
+import Foundation
+
 
 class WorkoutListViewController: UITableViewController, ListSectionObserver, TabBarSelectionObserver {
     
@@ -40,6 +42,10 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
     
     private lazy var sortItem = UIBarButtonItem(title: self.sortType.stringWithArrow, style: .plain, target: self, action: #selector(showSortController))
     
+    
+    private lazy var rewardButton = UIBarButtonItem(title: "Rewards", style: .plain, target: self, action: #selector(showpopup))
+    
+    
     let noDataLabel = UILabel(
         text: LS["NoData.Message"],
         textColor: .secondaryColor,
@@ -47,7 +53,7 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         numberOfLines: 0,
         textAlignment: .center
     )
-
+    
     override func viewDidLoad() {
         DataManager.workoutMonitor.addObserver(self)
         
@@ -69,6 +75,8 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         self.lastKnownDistanceUnit = UserPreferences.distanceMeasurementType.safeValue
         
         self.navigationItem.rightBarButtonItem = sortItem
+        
+        self.navigationItem.leftBarButtonItem = rewardButton
     }
     
     deinit {
@@ -85,7 +93,7 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
             self.tableView.reloadRows(at: indexPaths, with: .none)
         }
     }
-
+    
     // MARK: TableView
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,14 +101,14 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         self.noDataLabel.isHidden = DataManager.workoutMonitor.numberOfObjects() != 0
         return sections
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let sectionCount = DataManager.workoutMonitor.numberOfObjects(safelyIn: section) else {
             return 0
         }
         return sectionCount
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let workout = DataManager.workoutMonitor[indexPath.section, indexPath.row]
         let cell = WorkoutListCell(workout: workout)
@@ -290,6 +298,149 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         self.present(controller, animated: true)
     }
     
+    
+    @objc func showpopup(sourceView: UIBarButtonItem){
+        
+        
+        
+        let detailVC = DetailViewController()
+        detailVC.headline = "Rewards"
+        self.present(detailVC, animated: true, completion: nil)
+        
+        
+        // Create a new StatsView with the sample statistics views
+        let statsView = StatsView(title: "Today's Workout Stats and metrics", statViews: [])
+        
+        // Add the StatsView to the current view hierarchy
+        detailVC.view.addSubview(statsView)
+        
+        // Configure the constraints for the StatsView
+        statsView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().inset(120)
+            //make.left.right.equalToSuperview().inset(20)
+            make.left.equalTo(detailVC.view.snp.centerX).offset(-200)
+            make.bottom.equalToSuperview().inset(50)
+        }
+        
+        
+        let monthCaloriesBurnt = 4000
+        let myLabelledDataView = LabelledDataView(title: "Total calories burnt", measurement: NSMeasurement(doubleValue: Double(monthCaloriesBurnt), unit: UnitEnergy.calories))
+        
+        detailVC.view.addSubview(myLabelledDataView)
+        myLabelledDataView.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(200)
+        }
+        let percentageConsistency = 60
+        let consistencyLabelledView = LabelledDataViewCustom(title: "Your consistency", measurementAndUnit: String(percentageConsistency) + " %")
+
+
+        
+        
+        detailVC.view.addSubview(consistencyLabelledView)
+        consistencyLabelledView.snp.makeConstraints { make in
+            make.top.equalTo(myLabelledDataView.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(20)
+        }
+        
+        let overallWinnings = 9.50
+        let overallrewardview = LabelledDataViewCustom(title: "This month's reward", measurementAndUnit: String(overallWinnings) + " AKM (4.75 USDC)")
+        
+        
+        detailVC.view.addSubview(overallrewardview)
+        overallrewardview.snp.makeConstraints { make in
+            make.top.equalTo(consistencyLabelledView.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(20)
+        }
+        
+        let reductionButton = UIButton()
+        reductionButton.setTitle("Insurance reduction", for: .normal)
+        reductionButton.backgroundColor = .orange
+        reductionButton.layer.cornerRadius = 10
+        reductionButton.addTarget(self, action: #selector(reductionTapped), for: .touchUpInside)
+        detailVC.view.addSubview(reductionButton)
+
+
+        let rewardButton = UIButton()
+        rewardButton.setTitle("AKM crypto reward", for: .normal)
+        rewardButton.backgroundColor = .orange
+        rewardButton.layer.cornerRadius = 10
+        rewardButton.addTarget(self, action: #selector(rewardTapped), for: .touchUpInside)
+
+        //detailVC.view.addSubview(reductionButton)
+        detailVC.view.addSubview(rewardButton)
+        
+
+
+//        let hoverStyles = """
+//            button:hover {
+//                color: grey;
+//                background-color: lightgrey;
+//            }
+//        """
+//
+//
+//        let style = "<style>\n\(hoverStyles)\n</style>"
+//        let htmlString = "<html>\n<head>\(style)</head>\n<body></body>\n</html>"
+//
+//        guard let data = htmlString.data(using: .utf8) else { return }
+//        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [.documentType: NSAttributedString.DocumentType.html]
+//        let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
+//
+//        reductionButton.setAttributedTitle(attributedString, for: .highlighted)
+//        rewardButton.setAttributedTitle(attributedString, for: .highlighted)
+        
+        
+        reductionButton.snp.makeConstraints { (make) in
+            make.top.equalTo(overallrewardview.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(20)
+            make.width.equalTo(170)
+            make.height.equalTo(40)
+         }
+        
+        rewardButton.snp.makeConstraints { (make) in
+            make.top.equalTo(overallrewardview.snp.bottom).offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.width.equalTo(170)
+            make.height.equalTo(40)
+         }
+
+//
+//        reductionButton.addTarget(self, action: #selector(buttonHover(_:)), for: .touchDragEnter)
+//        rewardButton.addTarget(self, action: #selector(buttonHover(_:)), for: .touchDragEnter)
+
+        
+
+        self.view.layoutIfNeeded()
+
+        
+        
+    }
+    
+    @objc func reductionTapped(_ sender: UIButton) {
+//        if sender.isTouchInside {
+//            sender.backgroundColor = .red
+//        }
+//        else {
+//            sender.backgroundColor = .orange // set to original color
+//        }
+    }
+
+    @objc func rewardTapped(_ sender: UIButton) {
+        // Handle AKM crypto reward button
+        print("User wants to get crypto reward ")
+        let myfunctions = APIFunctions()
+        myfunctions.makeCryptoReward()
+        
+//        if sender.isTouchInside {
+//            sender.backgroundColor = .red
+//        }
+//        else {
+//            sender.backgroundColor = .orange // set to original color
+//        }
+    }
+    
+
     func refetchWithFilters() {
         
         let filterClauses = filterTypes.map { (type) -> Where<Workout> in
@@ -301,3 +452,4 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
     }
     
 }
+

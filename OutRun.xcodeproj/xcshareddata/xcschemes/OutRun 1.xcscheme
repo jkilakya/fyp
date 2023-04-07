@@ -17,7 +17,7 @@
                BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
                BuildableName = "OutRun.app"
                BlueprintName = "OutRun"
-               ReferencedContainer = "container:Arkam.xcodeproj">
+               ReferencedContainer = "container:OutRun.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,15 +27,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
-            BuildableName = "OutRun.app"
-            BlueprintName = "OutRun"
-            ReferencedContainer = "container:Arkam.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
       </Testables>
    </TestAction>
@@ -43,7 +34,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      region = "GB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -57,7 +47,7 @@
             BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
             BuildableName = "OutRun.app"
             BlueprintName = "OutRun"
-            ReferencedContainer = "container:Arkam.xcodeproj">
+            ReferencedContainer = "container:OutRun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,7 +64,7 @@
             BlueprintIdentifier = "22B6CF5222CA0814002D2FB0"
             BuildableName = "OutRun.app"
             BlueprintName = "OutRun"
-            ReferencedContainer = "container:Arkam.xcodeproj">
+            ReferencedContainer = "container:OutRun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

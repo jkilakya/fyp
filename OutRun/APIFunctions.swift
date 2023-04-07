@@ -22,20 +22,48 @@ import Foundation
 import Alamofire
 
 class APIFunctions {
-
-    func fetchBalance(){
-        AF.request("http://172.20.10.2:8081/fetch").response { response in
-            print(response.data!)
+    
+    var delegate: DataDelegate?
+    static let functions = APIFunctions()
+    var baseURL = "http://10.68.64.138:8081"
+    
+     var akmbal: Any = "..."
+    
+    
+    func rollDice() ->String{
+        print(akmbal)
+        fetchBalance()
+        print(akmbal)
+        return "\(self.akmbal)"
+        //return "smthh"
+    }
+    
+    
+    func fetchBalance() {
+        let newURL = self.baseURL + "/fetch"
+        AF.request(newURL).response { response in
+            //print(response.data!)
             let data = String(data: response.data!, encoding: .utf8)
-            print(data)
+            //print(data)
+            self.akmbal = data
+            
+            
+            
+            self.delegate?.updateBal(newBal: data!)
+           
+            
+            
         }
+        
+        //return data
     }
     
     func makeCryptoReward(){
-        let accountSwift = "0x455E5AA18469bC6ccEF49594645666C587A3a71B"
-        let monthCaloriesSwift = "3750"
-        let percentageConsistencySwift = "0.5"
-        AF.request("http://192.168.0.187:8081/reward", method: .post, encoding: URLEncoding.httpBody, headers: [
+        let newURL = self.baseURL + "/reward"
+        let accountSwift = "0xaF5958690bE8911412f7364e6953be6878C6967A"
+        let monthCaloriesSwift = "4000"
+        let percentageConsistencySwift = "0.6"
+        AF.request(newURL, method: .post, encoding: URLEncoding.httpBody, headers: [
             "account": accountSwift,
             "monthCaloriesBurnt": monthCaloriesSwift,
             "percentageConsistency":percentageConsistencySwift]).responseJSON{
@@ -46,4 +74,6 @@ class APIFunctions {
                 
             }
     }
+    
+    
 }

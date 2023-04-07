@@ -77,6 +77,7 @@
                                                 <imageReference key="image" image="arrowshape.right.fill" catalog="system" symbolScale="large" variableValue="1"/>
                                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="34"/>
                                                 <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                                             </buttonConfiguration>
                                             <connections>
                                                 <action selector="clickClaimButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JMs-EB-2hb"/>
@@ -85,10 +86,10 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xx7-vL-7fp">
-                                    <rect key="frame" x="123.00000000000001" y="426" width="146.33333333333337" height="34.333333333333314"/>
+                                    <rect key="frame" x="50" y="426" width="293" height="34.333333333333314"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0M-6f-N1t">
-                                            <rect key="frame" x="0.0" y="0.0" width="146.33333333333334" height="34.333333333333336"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="34.333333333333336"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" title="Start policy now">
                                                 <color key="baseBackgroundColor" name="accentColor"/>
@@ -109,7 +110,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Premium                        $500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-Yd-QgZ">
                                             <rect key="frame" x="38" y="0.0" width="278.66666666666669" height="31.333333333333332"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -128,7 +129,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On-boarding fee          100 AKM ($50)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-UW-e8p">
                                             <rect key="frame" x="38" y="0.0" width="285" height="31.333333333333332"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -200,13 +201,14 @@
                                 <constraint firstItem="hfa-He-Qww" firstAttribute="leading" secondItem="739-Wc-zsi" secondAttribute="leading" constant="20" id="9H3-sq-hqy"/>
                                 <constraint firstItem="ke4-Xy-FEh" firstAttribute="top" secondItem="fIv-8S-xGB" secondAttribute="bottom" constant="8" symbolic="YES" id="Apy-J2-pxU"/>
                                 <constraint firstAttribute="trailing" secondItem="qe0-T4-X3J" secondAttribute="trailing" constant="46.329999999999998" id="CLc-cR-7wI"/>
-                                <constraint firstItem="xx7-vL-7fp" firstAttribute="leading" secondItem="739-Wc-zsi" secondAttribute="leading" constant="123" id="DPn-1T-AZ0"/>
+                                <constraint firstItem="xx7-vL-7fp" firstAttribute="leading" secondItem="739-Wc-zsi" secondAttribute="leading" constant="50" id="DPn-1T-AZ0"/>
                                 <constraint firstItem="rqh-WX-ptI" firstAttribute="leading" secondItem="739-Wc-zsi" secondAttribute="leading" constant="109" id="Drk-Et-f3O"/>
                                 <constraint firstItem="qs3-iw-NNQ" firstAttribute="leading" secondItem="739-Wc-zsi" secondAttribute="leading" constant="40" id="Gry-BN-hxb"/>
+                                <constraint firstItem="5e4-60-E4n" firstAttribute="top" secondItem="qe0-T4-X3J" secondAttribute="bottom" priority="250" constant="20" id="Jf5-w0-Agd"/>
                                 <constraint firstItem="I6j-8x-iNd" firstAttribute="top" secondItem="qe0-T4-X3J" secondAttribute="bottom" constant="3.6699999999999999" id="KE5-w4-MA1"/>
                                 <constraint firstItem="Q2t-i0-zxe" firstAttribute="top" secondItem="oLr-Vl-dQ1" secondAttribute="bottom" constant="20" id="KEw-HQ-KaC"/>
                                 <constraint firstItem="rqh-WX-ptI" firstAttribute="top" secondItem="739-Wc-zsi" secondAttribute="top" constant="100" id="NMz-qT-8Ck"/>
-                                <constraint firstAttribute="trailing" secondItem="xx7-vL-7fp" secondAttribute="trailing" constant="123.67" id="OOC-NV-cXA"/>
+                                <constraint firstAttribute="trailing" secondItem="xx7-vL-7fp" secondAttribute="trailing" constant="50" id="OOC-NV-cXA"/>
                                 <constraint firstAttribute="trailing" secondItem="rqh-WX-ptI" secondAttribute="trailing" constant="109" id="PHV-gq-33g"/>
                                 <constraint firstItem="hfa-He-Qww" firstAttribute="top" secondItem="739-Wc-zsi" secondAttribute="top" constant="20" id="S0S-14-Jfz"/>
                                 <constraint firstItem="5e4-60-E4n" firstAttribute="top" secondItem="I6j-8x-iNd" secondAttribute="bottom" constant="20" id="Sux-h7-qj9"/>
@@ -253,7 +255,12 @@
                         <sections/>
                     </tableView>
                     <connections>
+                        <outlet property="horizontalLine" destination="5e4-60-E4n" id="xb4-wC-lHP"/>
+                        <outlet property="horizontalLineConstraint" destination="Sux-h7-qj9" id="yeH-eC-3pn"/>
                         <outlet property="makeClaimButton" destination="4qP-vz-hhA" id="l1p-rb-P06"/>
+                        <outlet property="monthlyPremium" destination="qe0-T4-X3J" id="iHq-bi-HCm"/>
+                        <outlet property="onBoardingCost" destination="I6j-8x-iNd" id="RlS-bA-QLU"/>
+                        <outlet property="startPolicyButton" destination="j0M-6f-N1t" id="Ayi-qf-jvT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -278,6 +285,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

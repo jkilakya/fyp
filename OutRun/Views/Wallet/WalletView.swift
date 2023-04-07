@@ -7,17 +7,49 @@
 
 import SwiftUI
 import UIKit
+import Glaip
+
+protocol DataDelegate{
+    func updateBal(newBal: String)
+}
 
 
-struct WalletView: View {
-    
+struct WalletView: View, DataDelegate {
+func updateBal(newBal: String) {
+      print(newBal)
+      AKMbal = newBal
+}
+
+
     @State var onSwapView = false // Step 2
-    
-    
-    var body: some View {
+
+    @State var AKMbal = ""
+
+@ObservedObject private var glaip = Glaip(
+     title: "Glaip Demo App",
+     description: "Demo app to demonstrate Web3 login",
+     supportedWallets: [.MetaMask])
+
+     
+
+func getAKMbal()  {
+
+APIFunctions.functions.delegate = self
+APIFunctions.functions.fetchBalance()
+print("hello")
+var akmbal = ""
+
+//func getAKMbal() async  {
+let myobj = APIFunctions()
+//AKMbal = "for now"
+AKMbal =   myobj.rollDice()
+
+}
+     
+var body: some View {
         
        
-    NavigationView{ // Step 1
+    //NavigationView{ // Step 1
     
     VStack(alignment: .leading, spacing: 3.0) {
     
@@ -33,20 +65,35 @@ struct WalletView: View {
     
     VStack(alignment: .center, spacing: 10.0){
     
-    // Step 3
-    NavigationLink(destination: SwapView(), isActive: $onSwapView) { EmptyView() }
+//    // Step 3
+//    NavigationLink(destination: SwapView(), isActive: $onSwapView) { EmptyView() }
     
     
     
     Text("Available Balance")
-    .font(.title2)
+    .font(.title)
     .fontWeight(.semibold)
     .foregroundColor(Color("secondaryColor"))
     .multilineTextAlignment(.center)
     .padding(.all)
     
-    Text("0 AKM + 1000 USDC")
-    .font(.largeTitle)
+    
+    //we want to fetch the data from the API call
+    //make a call to API functions
+    
+    
+//    Text(AKMbal)
+//    .onAppear(perform:getAKMbal)
+
+    Text(AKMbal)
+    .onAppear(perform: getAKMbal
+    
+    )
+    
+    
+    //Text("0 AKM + 1000 USDC")
+    //.font(.largeTitle)
+    .font(.title2)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.center)
     .padding([.leading, .bottom, .trailing])
@@ -58,6 +105,16 @@ struct WalletView: View {
     
     if #available(iOS 14.0, *) {
     Button {
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
+    
     print("Deposit button was tapped")
     } label: {
     if #available(iOS 14.0, *) {
@@ -82,10 +139,21 @@ struct WalletView: View {
     
     if #available(iOS 14.0, *) {
     Button {
+    
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
     print("Swap button was tapped")
     //insert code to jump to swapView here
     
     self.onSwapView = true // Step 4
+    
     
     
     } label: {
@@ -107,6 +175,16 @@ struct WalletView: View {
     
     if #available(iOS 14.0, *) {
     Button {
+    //using glaip to connect to metamask
+    glaip.loginUser(type: .MetaMask) { result in
+      switch result {
+      case .success(let user):
+        print(user.wallet.address)
+      case .failure(let error):
+        print(error)
+      }
+    }
+    
     print("Withdraw button was tapped")
     } label: {
     if #available(iOS 14.0, *) {
@@ -130,20 +208,14 @@ struct WalletView: View {
     }
     .padding(.all)//end of buttons HStack
     
-    }
-    .padding(.all)
-    .accentColor(/*@START_MENU_TOKEN@*/.orange/*@END_MENU_TOKEN@*/)
-    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("foregroundColor")/*@END_MENU_TOKEN@*/)
     
-    
-    //end of top VStack
-    
+    //inserting here
     Spacer()
     
-    Text("      Previous Rewards")
-    .font(.title2)
+    Text("Previous Rewards")
+    .font(.title3)
     .fontWeight(.semibold)
-    .foregroundColor(Color("secondaryColor"))
+    .foregroundColor(Color.black)
     .multilineTextAlignment(.center)
     .padding(.all)
     
@@ -255,6 +327,17 @@ struct WalletView: View {
     
     
     Spacer()
+    //inserting here ends**********8
+    
+    }
+    .padding(.all)
+    .accentColor(/*@START_MENU_TOKEN@*/.orange/*@END_MENU_TOKEN@*/)
+    .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
+    
+    //******************************************************
+    //end of top VStack
+    
+    
     
     
     }
@@ -262,7 +345,7 @@ struct WalletView: View {
     
     //end of main VStack
     
-    }
+    //}
     //.navigationBarTitle("")
     .navigationBarHidden(true)
     
@@ -281,3 +364,15 @@ struct WalletView_Previews: PreviewProvider {
         //WalletView(onSwapView: false)
     }
 }
+
+//extension UITableViewController: DataDelegate{
+//    func updateBal(newBal: String) {
+//        do{
+//             //akmbal = try JSONDecoder().decode()(String.self, from: newBal.data(using: .utf8)!)
+//            print(newBal)
+//        }
+//        catch{
+//            print("failed to decode")
+//        }
+//    }
+//}

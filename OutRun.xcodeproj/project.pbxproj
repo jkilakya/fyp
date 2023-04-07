@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -179,9 +179,15 @@
 		456B5CF029CFF45F00439872 /* InsuranceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */; };
 		456B5CF229D00A4700439872 /* InsuranceNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B5CF129D00A4700439872 /* InsuranceNewVC.swift */; };
 		4579A12529D33EA6003F6885 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579A12429D33EA6003F6885 /* WalletView.swift */; };
+		45AF137629DE63230092176F /* LabelledDataViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF137529DE63230092176F /* LabelledDataViewCustom.swift */; };
 		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
 		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
+		C2C4530429DFBEF400C2571A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4530329DFBEF400C2571A /* TestView.swift */; };
+		C2C4530729DFCB3200C2571A /* Glaip in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530629DFCB3200C2571A /* Glaip */; };
+		C2C4530A29DFD20800C2571A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530929DFD20800C2571A /* WalletConnectSwift */; };
+		C2C4530D29DFD3D800C2571A /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530C29DFD3D800C2571A /* Crypto */; };
+		C2C4530F29DFD3D800C2571A /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530E29DFD3D800C2571A /* _CryptoExtras */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -397,10 +403,12 @@
 		456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsuranceStoryboard.storyboard; sourceTree = "<group>"; };
 		456B5CF129D00A4700439872 /* InsuranceNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceNewVC.swift; sourceTree = "<group>"; };
 		4579A12429D33EA6003F6885 /* WalletView.swift */ = {isa = PBXFileReference; indentWidth = 0; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; tabWidth = 1; wrapsLines = 1; };
+		45AF137529DE63230092176F /* LabelledDataViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDataViewCustom.swift; sourceTree = "<group>"; };
 		45E7649D29D415C100EB571E /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
 		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
+		C2C4530329DFBEF400C2571A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -409,7 +417,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C4530D29DFD3D800C2571A /* Crypto in Frameworks */,
+				C2C4530729DFCB3200C2571A /* Glaip in Frameworks */,
+				C2C4530F29DFD3D800C2571A /* _CryptoExtras in Frameworks */,
 				22B6CF6D22CA0841002D2FB0 /* HealthKit.framework in Frameworks */,
+				C2C4530A29DFD20800C2571A /* WalletConnectSwift in Frameworks */,
 				50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,6 +881,7 @@
 			isa = PBXGroup;
 			children = (
 				22B6CF7B22CA1675002D2FB0 /* LabelledDataView.swift */,
+				45AF137529DE63230092176F /* LabelledDataViewCustom.swift */,
 				22B2A8A4230D3B7300EF8558 /* LabelledRelativeDataView.swift */,
 				22B2A89E230D2FC800EF8558 /* LabelledTimeView.swift */,
 				22B2A89C230D298F00EF8558 /* LabelledDiagramView.swift */,
@@ -958,6 +971,7 @@
 			children = (
 				4579A12429D33EA6003F6885 /* WalletView.swift */,
 				C2C452FE29DB3DBD00C2571A /* SwapView.swift */,
+				C2C4530329DFBEF400C2571A /* TestView.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -989,6 +1003,12 @@
 			dependencies = (
 			);
 			name = OutRun;
+			packageProductDependencies = (
+				C2C4530629DFCB3200C2571A /* Glaip */,
+				C2C4530929DFD20800C2571A /* WalletConnectSwift */,
+				C2C4530C29DFD3D800C2571A /* Crypto */,
+				C2C4530E29DFD3D800C2571A /* _CryptoExtras */,
+			);
 			productName = OutRun;
 			productReference = 22B6CF5322CA0814002D2FB0 /* OutRun.app */;
 			productType = "com.apple.product-type.application";
@@ -1041,6 +1061,11 @@
 				pl,
 			);
 			mainGroup = 22B6CF4A22CA0814002D2FB0;
+			packageReferences = (
+				C2C4530529DFCB3200C2571A /* XCRemoteSwiftPackageReference "Glaip" */,
+				C2C4530829DFD20800C2571A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				C2C4530B29DFD3D800C2571A /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			productRefGroup = 22B6CF5422CA0814002D2FB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1193,6 +1218,8 @@
 				2259A0292368D6EB00F70F96 /* HKWorkoutQueryObject.swift in Sources */,
 				22713F0522DE291F00EF50FB /* WorkoutListCell.swift in Sources */,
 				22D299372402BDE400F3F6B8 /* TimeIntervalPickerSetting.swift in Sources */,
+				45AF137629DE63230092176F /* LabelledDataViewCustom.swift in Sources */,
+				C2C4530429DFBEF400C2571A /* TestView.swift in Sources */,
 				229186332367909D00929885 /* PolicyViewController.swift in Sources */,
 				22AB2FB1233CA201002EF0DE /* WorkoutMapViewDelegate.swift in Sources */,
 				22FEA09224CD38CB0007CA9C /* WorkoutBuilder+AutoPauseDetection.swift in Sources */,
@@ -1483,7 +1510,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S2H6W4WMN8;
+				DEVELOPMENT_TEAM = 8P9Z7LWM7V;
 				INFOPLIST_FILE = "$(SRCROOT)/OutRun/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1546,6 +1573,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2C4530529DFCB3200C2571A /* XCRemoteSwiftPackageReference "Glaip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maurovz/Glaip.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C2C4530829DFD20800C2571A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C2C4530B29DFD3D800C2571A /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2C4530629DFCB3200C2571A /* Glaip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2C4530529DFCB3200C2571A /* XCRemoteSwiftPackageReference "Glaip" */;
+			productName = Glaip;
+		};
+		C2C4530929DFD20800C2571A /* WalletConnectSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2C4530829DFD20800C2571A /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			productName = WalletConnectSwift;
+		};
+		C2C4530C29DFD3D800C2571A /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2C4530B29DFD3D800C2571A /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+		C2C4530E29DFD3D800C2571A /* _CryptoExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2C4530B29DFD3D800C2571A /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = _CryptoExtras;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22B6CF4B22CA0814002D2FB0 /* Project object */;
 }
