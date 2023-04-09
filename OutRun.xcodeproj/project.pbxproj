@@ -188,6 +188,9 @@
 		C2C4530A29DFD20800C2571A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530929DFD20800C2571A /* WalletConnectSwift */; };
 		C2C4530D29DFD3D800C2571A /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530C29DFD3D800C2571A /* Crypto */; };
 		C2C4530F29DFD3D800C2571A /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530E29DFD3D800C2571A /* _CryptoExtras */; };
+		C2C4531329E30E3500C2571A /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531229E30E3500C2571A /* Hash.swift */; };
+		C2C4531529E3297700C2571A /* Hash2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531429E3297700C2571A /* Hash2.swift */; };
+		C2C4531729E32AC000C2571A /* Hash3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531629E32AC000C2571A /* Hash3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -409,6 +412,9 @@
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
 		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
 		C2C4530329DFBEF400C2571A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		C2C4531229E30E3500C2571A /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		C2C4531429E3297700C2571A /* Hash2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash2.swift; sourceTree = "<group>"; };
+		C2C4531629E32AC000C2571A /* Hash3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash3.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -683,6 +689,9 @@
 				22EE6E952311EF90001D47CF /* Protocols */,
 				22B1F12722D6193A00C02973 /* Support Files */,
 				45E7649D29D415C100EB571E /* APIFunctions.swift */,
+				C2C4531229E30E3500C2571A /* Hash.swift */,
+				C2C4531429E3297700C2571A /* Hash2.swift */,
+				C2C4531629E32AC000C2571A /* Hash3.swift */,
 			);
 			path = OutRun;
 			sourceTree = "<group>";
@@ -1184,6 +1193,7 @@
 				22FEA0AD24CDD4CA0007CA9C /* FileManager.swift in Sources */,
 				22DBFBE12349362900DE6E92 /* UserPreferences.swift in Sources */,
 				2287753E234A3DF60078CE12 /* TextInputSetting.swift in Sources */,
+				C2C4531729E32AC000C2571A /* Hash3.swift in Sources */,
 				2207B76523145AFD00BA71B5 /* DeleteWorkoutView.swift in Sources */,
 				22BD1F402474638200415A06 /* ApplicationStateObservation.swift in Sources */,
 				22FC085423AFF13E00184E4B /* SetupPermissionView.swift in Sources */,
@@ -1211,6 +1221,7 @@
 				22B2A8A5230D3B7300EF8558 /* LabelledRelativeDataView.swift in Sources */,
 				22BD1F3E247462FF00415A06 /* ApplicationStateObserver.swift in Sources */,
 				22A0B72E245B07B400E1AB68 /* WorkoutStatsSeriesSection.swift in Sources */,
+				C2C4531529E3297700C2571A /* Hash2.swift in Sources */,
 				2230926124D7081A00A3F636 /* WorkoutBuilder+LocationManagement.swift in Sources */,
 				22877544234A75A10078CE12 /* Units.swift in Sources */,
 				22B6CF7C22CA1675002D2FB0 /* LabelledDataView.swift in Sources */,
@@ -1222,6 +1233,7 @@
 				C2C4530429DFBEF400C2571A /* TestView.swift in Sources */,
 				229186332367909D00929885 /* PolicyViewController.swift in Sources */,
 				22AB2FB1233CA201002EF0DE /* WorkoutMapViewDelegate.swift in Sources */,
+				C2C4531329E30E3500C2571A /* Hash.swift in Sources */,
 				22FEA09224CD38CB0007CA9C /* WorkoutBuilder+AutoPauseDetection.swift in Sources */,
 				22B6CF7622CA0B13002D2FB0 /* UIView.swift in Sources */,
 				221436BF2443746B0010D82B /* Event.swift in Sources */,
