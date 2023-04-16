@@ -253,7 +253,7 @@ var body: some View {
     HStack( alignment: .center, spacing: 3.0){
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
     Spacer()
-    Text("January 2023")
+    Text("Mar 2023")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
@@ -261,7 +261,7 @@ var body: some View {
     Spacer()
     
     
-    Text("+ 0 AKM")
+    Text("+ 5.2 AKM")
     .font(.headline)
     .fontWeight(.semibold)
     .foregroundColor(Color("accentColorSwapped"))
@@ -277,14 +277,14 @@ var body: some View {
     Image(/*@START_MENU_TOKEN@*/"arkam logo"/*@END_MENU_TOKEN@*/)
     Spacer()
     
-    Text("December 2022")
+    Text("Feb 2023")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
     
     Spacer()
     
-    Text("+ 0 AKM")
+    Text("+ 6.3 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)
@@ -301,14 +301,14 @@ var body: some View {
     
     Spacer()
     
-    Text("November 2022")
+    Text("Jan 2023")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
     
     Spacer()
     
-    Text("+ 0 AKM")
+    Text("+ 6.7 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)
@@ -326,14 +326,14 @@ var body: some View {
     Spacer()
     
     
-    Text("October 2022")
+    Text("Dec 2022")
     .font(.headline)
     .multilineTextAlignment(.leading)
     .padding(.all)
     
     Spacer()
     
-    Text("+ 0 AKM")
+    Text("+ 7.1 AKM")
     .font(.headline)
     .foregroundColor(Color("accentColorSwapped"))
     .multilineTextAlignment(.trailing)

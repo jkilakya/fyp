@@ -323,7 +323,7 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         }
         
         
-        let monthCaloriesBurnt = 4000
+        let monthCaloriesBurnt = 4000000
         let myLabelledDataView = LabelledDataView(title: "Total calories burnt", measurement: NSMeasurement(doubleValue: Double(monthCaloriesBurnt), unit: UnitEnergy.calories))
         
         detailVC.view.addSubview(myLabelledDataView)
@@ -418,12 +418,7 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
     }
     
     @objc func reductionTapped(_ sender: UIButton) {
-//        if sender.isTouchInside {
-//            sender.backgroundColor = .red
-//        }
-//        else {
-//            sender.backgroundColor = .orange // set to original color
-//        }
+
     }
 
     @objc func rewardTapped(_ sender: UIButton) {
@@ -432,12 +427,14 @@ class WorkoutListViewController: UITableViewController, ListSectionObserver, Tab
         let myfunctions = APIFunctions()
         myfunctions.makeCryptoReward()
         
-//        if sender.isTouchInside {
-//            sender.backgroundColor = .red
-//        }
-//        else {
-//            sender.backgroundColor = .orange // set to original color
-//        }
+        
+        if sender.isTouchInside {
+            sender.backgroundColor = .lightGray
+        }
+        else {
+            sender.backgroundColor = .orange // set to original color
+        }
+        
     }
     
 

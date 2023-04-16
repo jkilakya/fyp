@@ -75,10 +75,13 @@ class InsuranceClaimCompletionBanner: ORBaseBanner {
     }()
     
     @objc private func saveWorkout() {
+        print("save button pressed")
+        
         
         self.dismiss()
         
     }
+ 
     
     @objc private func continueWorkout() {
         
@@ -102,37 +105,40 @@ class InsuranceClaimCompletionBanner: ORBaseBanner {
         let buttonHeight = 40
         
         contentView.addSubview(titleLabel)
-        contentView.addSubview(saveButton)
-        contentView.addSubview(continueButton)
-        contentView.addSubview(discardButton)
+//        contentView.addSubview(saveButton)
+//        contentView.addSubview(continueButton)
+//        contentView.addSubview(discardButton)
         
         titleLabel.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-        }
-        
-        saveButton.snp.makeConstraints { (make) in
             make.bottom.left.right.equalToSuperview()
             make.height.equalTo(buttonHeight)
+
         }
         
-        continueButton.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(spacing)
-            make.left.equalToSuperview()
-            make.bottom.equalTo(saveButton.snp.top).offset(-spacing)
-            make.height.equalTo(buttonHeight)
-        }
-        
-        discardButton.snp.makeConstraints { (make) in
-            make.right.equalToSuperview()
-            make.top.equalTo(continueButton)
-            make.left.equalTo(continueButton.snp.right).offset(spacing)
-            make.height.equalTo(buttonHeight)
-            make.width.equalTo(continueButton)
-        }
-        
-        self.saveButton.addTarget(self, action: #selector(saveWorkout), for: .touchUpInside)
-        self.continueButton.addTarget(self, action: #selector(continueWorkout), for: .touchUpInside)
-        self.discardButton.addTarget(self, action: #selector(discardWorkout), for: .touchUpInside)
+//                saveButton.snp.makeConstraints { (make) in
+//                    make.bottom.left.right.equalToSuperview()
+//                    make.height.equalTo(buttonHeight)
+//                }
+//
+//        continueButton.snp.makeConstraints { (make) in
+//            make.top.equalTo(titleLabel.snp.bottom).offset(spacing)
+//            make.left.equalToSuperview()
+//            make.bottom.equalTo(saveButton.snp.top).offset(-spacing)
+//            make.height.equalTo(buttonHeight)
+//        }
+//
+//        discardButton.snp.makeConstraints { (make) in
+//            make.right.equalToSuperview()
+//            make.top.equalTo(continueButton)
+//            make.left.equalTo(continueButton.snp.right).offset(spacing)
+//            make.height.equalTo(buttonHeight)
+//            make.width.equalTo(continueButton)
+//        }
+//
+//                self.saveButton.addTarget(self, action: #selector(saveWorkout), for: .touchUpInside)
+//        self.continueButton.addTarget(self, action: #selector(continueWorkout), for: .touchUpInside)
+//        self.discardButton.addTarget(self, action: #selector(discardWorkout), for: .touchUpInside)
         
         onDismiss = { banner in
             

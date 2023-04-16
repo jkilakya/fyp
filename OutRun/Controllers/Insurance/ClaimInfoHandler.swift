@@ -22,11 +22,31 @@ import Foundation
 
 class ClaimInfoHandler{
     
-    func infohandle(data: Any){
+    var infotowrite = ""
+    
+    func dataToString(data: Any) -> String{
+        if var theJSONData = try? JSONSerialization.data(
+            withJSONObject: data,
+            options: [.prettyPrinted]) {
+            let theJSONText = String(data: theJSONData,
+                                     encoding: .ascii)
+            print("JSON string = \n \(theJSONText!)")
+            
+            infotowrite = theJSONText!
+            
+        }
+        return "EMPTY"
+        
+    }
+    
+    
+    func infohandle(data: Any) -> String{
         //print("bro i print json data man!!-----------------------------")
         print(data)
         
         generateHash(infodict: data)
+        
+        return infotowrite
     }
      
     
@@ -69,7 +89,11 @@ class ClaimInfoHandler{
             let theJSONText = String(data: theJSONData,
                                        encoding: .ascii)
             print("JSON string = \n \(theJSONText!)")
+            
+            infotowrite = theJSONText!
             //print(theJSONData)
+            
+//            InsuranceNewVC().getjsonToWrite(val: theJSONText!)
             
             //convert the json to string
             return theJSONData
@@ -77,6 +101,13 @@ class ClaimInfoHandler{
         }
         
         return Data()
+    }
+    
+    
+    func getData() -> String{
+        print(infotowrite)
+        return infotowrite
+        
     }
     
 //    func jsonToString(json: AnyObject){

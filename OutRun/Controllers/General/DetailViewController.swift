@@ -78,4 +78,15 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true)
     }
 
+    @objc func saveFile(){
+        let activityViewController = UIActivityViewController(activityItems: ["This is my data"], applicationActivities: nil)
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @objc func showBanner(){
+        let banner = InsuranceClaimCompletionBanner()
+        banner.show(queuePosition: .front)
+    }
+    
+
 }

@@ -24,7 +24,8 @@ import UIKit
 class InsuranceNewVC:  UIViewController {
     
     //----------------------------- TableViewController,
-    
+    var jsonToWrite = "EMPTYSTRING"
+        
     var mydata: Any = []
     
 //    init(){
@@ -39,6 +40,7 @@ class InsuranceNewVC:  UIViewController {
     //-----------------------------
     
     private lazy var rewardButton = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refresh))
+    private lazy var saveDataButton = UIBarButtonItem(title: "Save Data", style: .plain, target: self, action: #selector(saveData))
 
     @IBOutlet weak var makeClaimButton: UIButton!
     @IBOutlet weak var onBoardingCost: UIStackView!
@@ -67,6 +69,7 @@ class InsuranceNewVC:  UIViewController {
     //@IBAction func subcbuttonTapped(){}
     
     
+    /// <#Description#>
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
@@ -78,6 +81,7 @@ class InsuranceNewVC:  UIViewController {
 //        APIFunctions.functions.delegateInsurance = self
 //        APIFunctions.functions.insuranceStarted()
         self.navigationItem.rightBarButtonItem = rewardButton
+
         
         textField1 = UITextField()
         textField2 = UITextField()
@@ -99,16 +103,17 @@ class InsuranceNewVC:  UIViewController {
     
         textField5.becomeFirstResponder()
         textField5.delegate = self
+    
+        
+
         
     }
     
     @IBAction func clickClaimButton(_ sender: Any) {
         print ("Claim button pressed.")
-        let detailVC = DetailViewController()
+        var detailVC = DetailViewController()
                detailVC.headline = "Make a Claim"
                self.present(detailVC, animated: true, completion: nil)
-               
-               
                let statsView = StatsView(title: "Fill in the details below", statViews: [])
                detailVC.view.addSubview(statsView)
                statsView.snp.makeConstraints { (make) in
@@ -253,10 +258,16 @@ class InsuranceNewVC:  UIViewController {
         startPolicyButton.setTitle("Pay next month's premium", for: .normal)
     }
 
+    @objc func saveData(sourceView: UIBarButtonItem){
+        print ("Save data button pressed")
+        print(jsonToWrite)
+        let activityViewController = UIActivityViewController(activityItems: [jsonToWrite], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+
     @objc func supdoctapped() {
     }
-   
-    
+
     
     @IBAction func subclaimtapped(_ sender: UIButton) {
         
@@ -265,28 +276,30 @@ class InsuranceNewVC:  UIViewController {
         //create the json with the required info here
         
         //here we unwrap an optional type with forced unwarapping, empty textfields can throw an error
-        let banner = InsuranceClaimCompletionBanner()
-                
-        banner.show(queuePosition: .front)
+//        print()
+
+
+        self.navigationItem.leftBarButtonItem = saveDataButton
+
         
          mydata = [
             //personal info
-            "PersonalInformation":[
-                "Name": "Alice Grey",
+            "Personal_Info":[
+                "Name": "Bob Smith",
                 "Height":"175", //in centimenters
                 "Weigth": "70", //in kilograms
-                "PreviousIllnesses": "asthma, minor heart attack",
+                "Previous Illnesses": "N/A",
             ],
             
             //insurance section
-            "InsuranceInformation":[
-                "InsurancePlan": "Basic",
-                "MonthlyPremium": "500 USD"
+            "Insurance_Data":[
+                "Insurance Plan": "Basic",
+                "Monthly Premium": "500 USD"
             
             ],
             
             //activity information - last three months
-            "ActivityInformation":[
+            "Fitness_Level":[
                 
                 "caloriesBurnt_0monthsago": "13500", //in kcal
                 "caloriesBurnt_1monthsago": "14500",
@@ -299,7 +312,7 @@ class InsuranceNewVC:  UIViewController {
             ],
             
             
-            "ClaimInformation":[
+            "Medical_Issue":[
                 
                 "dos":self.textField1.text!,
                 "diagnosis": self.textField2.text!,
@@ -311,8 +324,7 @@ class InsuranceNewVC:  UIViewController {
 
         ]
 
-        ClaimInfoHandler().infohandle(data: mydata)
-     
+        jsonToWrite = ClaimInfoHandler().infohandle(data: mydata)
     }
 
 }//end of class InsuranceNewVC

@@ -86,8 +86,11 @@ class APIFunctions {
             "amount": amount,
             "hash": Hash]).responseJSON{
                 response in
-                print(response.data!)
                 let data = String(data: response.data!, encoding: .utf8)
+                let banner = InsuranceClaimCompletionBanner()
+                banner.duration = 4
+                banner.show(queuePosition: .front)
+                print(response.data!)
                 print(data)
                 
             }
