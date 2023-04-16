@@ -184,6 +184,7 @@
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
 		C24F07FB29EBAAE8003CC364 /* ClaimInfoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F07FA29EBAAE8003CC364 /* ClaimInfoHandler.swift */; };
 		C24F07FD29EBAB1F003CC364 /* Hash4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F07FC29EBAB1F003CC364 /* Hash4.swift */; };
+		C24F080029EBB69C003CC364 /* InsuranceClaimCompletionBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F07FF29EBB69C003CC364 /* InsuranceClaimCompletionBanner.swift */; };
 		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
 		C2C4530429DFBEF400C2571A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4530329DFBEF400C2571A /* TestView.swift */; };
 		C2C4530729DFCB3200C2571A /* Glaip in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530629DFCB3200C2571A /* Glaip */; };
@@ -411,6 +412,7 @@
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
 		C24F07FA29EBAAE8003CC364 /* ClaimInfoHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaimInfoHandler.swift; sourceTree = "<group>"; };
 		C24F07FC29EBAB1F003CC364 /* Hash4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash4.swift; sourceTree = "<group>"; };
+		C24F07FF29EBB69C003CC364 /* InsuranceClaimCompletionBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceClaimCompletionBanner.swift; sourceTree = "<group>"; };
 		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
 		C2C4530329DFBEF400C2571A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -764,6 +766,7 @@
 		22B6CF7A22CA1589002D2FB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C24F07FE29EBB617003CC364 /* Insurance */,
 				4579A12329D33E96003F6885 /* Wallet */,
 				2229056B24DDE2FB0052ACFF /* General */,
 				22CBE0CD244861190009D9A7 /* Stats */,
@@ -989,6 +992,14 @@
 				C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C24F07FE29EBB617003CC364 /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				C24F07FF29EBB69C003CC364 /* InsuranceClaimCompletionBanner.swift */,
+			);
+			path = Insurance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1263,6 +1274,7 @@
 				2207B75623128F8A00BA71B5 /* CLLocation.swift in Sources */,
 				22D299332402B1AC00F3F6B8 /* InputViewSetting.swift in Sources */,
 				226404B72376185E0018F1F8 /* HKImportObjectCell.swift in Sources */,
+				C24F080029EBB69C003CC364 /* InsuranceClaimCompletionBanner.swift in Sources */,
 				22FEA0B124CDDFF80007CA9C /* CustomByteFormatting.swift in Sources */,
 				22B6CF7022CA08C9002D2FB0 /* WorkoutBuilder.swift in Sources */,
 				22713F0722DE58C100EF50FB /* NavigationController.swift in Sources */,

@@ -41,6 +41,8 @@ class ClaimInfoHandler{
 //        print(Data)
         
         //get the JSON of the dictionary
+        //var amt = infodict[""]
+        
         let jsoninfo = getJSON(infodict: infodict)
         //print("printing json info in genhash")
         print(jsoninfo)
@@ -48,6 +50,13 @@ class ClaimInfoHandler{
         //call the hash function
         print("hash of the Data: ")
         print(Hash4().sha256(jsoninfo))
+        
+        var dataHash = Hash4().sha256(jsoninfo)! // stores the hash of the user information
+        
+        //now call API function reimbusre(amount, hash) to connect to backend and store on blockchain
+        APIFunctions().reimburse(Hash: dataHash)
+        
+        
         
     }
     

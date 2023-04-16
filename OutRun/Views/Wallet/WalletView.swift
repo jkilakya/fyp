@@ -36,16 +36,16 @@ func getAKMbal()  {
 
 
 //------------------------------------------------------------------
-let jsonString = """
-  
-   {"name":"ilakya", "age":21, "illness":"idk bro"}
-  
-  
-"""
+//let jsonString = """
+//
+//   {"name":"ilakya", "age":21, "illness":"idk bro"}
+//
+//
+//"""
 
-let data = Data(jsonString.utf8)
-
-print(data)
+//let data = Data(jsonString.utf8)
+//
+//print(data)
 
 //print("Hash1:----------------------")
 //print(Hash().example(text: "{\"name\":\"ilakya\", \"age\":21, \"illness\":\"idk bro\"}"))

@@ -25,7 +25,7 @@ class APIFunctions {
     
     var delegate: DataDelegate?
     static let functions = APIFunctions()
-    var baseURL = "http://10.68.64.138:8081"
+    var baseURL = "http://10.68.10.185:8081"
     
      var akmbal: Any = "..."
     
@@ -75,5 +75,22 @@ class APIFunctions {
             }
     }
     
+    
+    func reimburse(Hash: String){
+        let newURL = self.baseURL + "/reimburse"
+        let accountSwift = "0xaF5958690bE8911412f7364e6953be6878C6967A"
+        let amount = "300"//has to pass value
+        //let hash = Hash //pass value
+        AF.request(newURL, method: .post, encoding: URLEncoding.httpBody, headers: [
+            "account": accountSwift,
+            "amount": amount,
+            "hash": Hash]).responseJSON{
+                response in
+                print(response.data!)
+                let data = String(data: response.data!, encoding: .utf8)
+                print(data)
+                
+            }
+    }
     
 }

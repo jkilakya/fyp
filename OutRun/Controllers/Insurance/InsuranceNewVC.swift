@@ -265,6 +265,10 @@ class InsuranceNewVC:  UIViewController {
         //create the json with the required info here
         
         //here we unwrap an optional type with forced unwarapping, empty textfields can throw an error
+        let banner = InsuranceClaimCompletionBanner()
+                
+        banner.show(queuePosition: .front)
+        
          mydata = [
             //personal info
             "PersonalInformation":[
