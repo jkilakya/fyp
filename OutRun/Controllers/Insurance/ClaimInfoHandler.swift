@@ -23,7 +23,7 @@ import Foundation
 class ClaimInfoHandler{
     
     func infohandle(data: Any){
-        print("bro i print json data man!!-----------------------------")
+        //print("bro i print json data man!!-----------------------------")
         print(data)
         
         generateHash(infodict: data)
@@ -32,7 +32,7 @@ class ClaimInfoHandler{
     
     func generateHash(infodict: Any){
         
-        print("the generateHash funcccc")
+        //print("the generateHash funcccc")
         
 //        //convert from type Any to String
 //        print("this is the Any to String bit-----------")

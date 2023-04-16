@@ -63,7 +63,7 @@ print(data)
 
 APIFunctions.functions.delegate = self
 APIFunctions.functions.fetchBalance()
-print("hello")
+//print("hello")
 var akmbal = ""
 
 //func getAKMbal() async  {
