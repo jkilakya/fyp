@@ -42,13 +42,9 @@ class APIFunctions {
     func fetchBalance() {
         let newURL = self.baseURL + "/fetch"
         AF.request(newURL).response { response in
-            //print(response.data!)
+
             let data = String(data: response.data!, encoding: .utf8)
-            //print(data)
             self.akmbal = data
-            
-            
-            
             self.delegate?.updateBal(newBal: data!)
            
             
