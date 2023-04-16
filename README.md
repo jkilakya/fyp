@@ -22,7 +22,7 @@ This project is fully open-source and ad-free.
     
     git branch -a
 
-    git checkout <theRemoteBranchYouWant>
+    git checkout remotes/origin/<REMOTE_BRANCH_YOU_WANT>
 
 **SETUP APP**
 
@@ -48,9 +48,6 @@ Add the following snippet to line 531, just after extension ChartDataSet: RangeR
             entries.replaceSubrange(subrange, with: newElements)
             notifyDataSetChanged()
         }
-
-**MISSING PROJECT FILES**
-There might be some missing project files, indicated by the red file names on the left sidebar of Xcode window (e.g. OutRun > Controllers > Insurance > InsuranceViewController). Delete these files as Xcode thinks we need them but they are not required anymore. 
 
 **BUILD**
 Select iPhone 14 Pro Max as simulator and build the app

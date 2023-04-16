@@ -182,15 +182,14 @@
 		45AF137629DE63230092176F /* LabelledDataViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF137529DE63230092176F /* LabelledDataViewCustom.swift */; };
 		45E7649E29D415C100EB571E /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7649D29D415C100EB571E /* APIFunctions.swift */; };
 		50A16B63C6F23E2D1E6210BA /* Pods_OutRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */; };
+		C24F07FB29EBAAE8003CC364 /* ClaimInfoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F07FA29EBAAE8003CC364 /* ClaimInfoHandler.swift */; };
+		C24F07FD29EBAB1F003CC364 /* Hash4.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F07FC29EBAB1F003CC364 /* Hash4.swift */; };
 		C2C452FF29DB3DBD00C2571A /* SwapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C452FE29DB3DBD00C2571A /* SwapView.swift */; };
 		C2C4530429DFBEF400C2571A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4530329DFBEF400C2571A /* TestView.swift */; };
 		C2C4530729DFCB3200C2571A /* Glaip in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530629DFCB3200C2571A /* Glaip */; };
 		C2C4530A29DFD20800C2571A /* WalletConnectSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530929DFD20800C2571A /* WalletConnectSwift */; };
 		C2C4530D29DFD3D800C2571A /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530C29DFD3D800C2571A /* Crypto */; };
 		C2C4530F29DFD3D800C2571A /* _CryptoExtras in Frameworks */ = {isa = PBXBuildFile; productRef = C2C4530E29DFD3D800C2571A /* _CryptoExtras */; };
-		C2C4531329E30E3500C2571A /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531229E30E3500C2571A /* Hash.swift */; };
-		C2C4531529E3297700C2571A /* Hash2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531429E3297700C2571A /* Hash2.swift */; };
-		C2C4531729E32AC000C2571A /* Hash3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C4531629E32AC000C2571A /* Hash3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -410,11 +409,10 @@
 		45E7649D29D415C100EB571E /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		8C0699EE439FF3DC5E16B8E0 /* Pods-OutRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C8D965F1351F85D4E4F35D /* Pods-OutRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutRun/Pods-OutRun.release.xcconfig"; sourceTree = "<group>"; };
+		C24F07FA29EBAAE8003CC364 /* ClaimInfoHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClaimInfoHandler.swift; sourceTree = "<group>"; };
+		C24F07FC29EBAB1F003CC364 /* Hash4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash4.swift; sourceTree = "<group>"; };
 		C2C452FE29DB3DBD00C2571A /* SwapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapView.swift; sourceTree = "<group>"; };
 		C2C4530329DFBEF400C2571A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		C2C4531229E30E3500C2571A /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
-		C2C4531429E3297700C2571A /* Hash2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash2.swift; sourceTree = "<group>"; };
-		C2C4531629E32AC000C2571A /* Hash3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash3.swift; sourceTree = "<group>"; };
 		D2DC1601B9458B3FC1788F0E /* Pods_OutRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -689,9 +687,7 @@
 				22EE6E952311EF90001D47CF /* Protocols */,
 				22B1F12722D6193A00C02973 /* Support Files */,
 				45E7649D29D415C100EB571E /* APIFunctions.swift */,
-				C2C4531229E30E3500C2571A /* Hash.swift */,
-				C2C4531429E3297700C2571A /* Hash2.swift */,
-				C2C4531629E32AC000C2571A /* Hash3.swift */,
+				C24F07FC29EBAB1F003CC364 /* Hash4.swift */,
 			);
 			path = OutRun;
 			sourceTree = "<group>";
@@ -971,6 +967,7 @@
 			children = (
 				456B5CEF29CFF45F00439872 /* InsuranceStoryboard.storyboard */,
 				456B5CF129D00A4700439872 /* InsuranceNewVC.swift */,
+				C24F07FA29EBAAE8003CC364 /* ClaimInfoHandler.swift */,
 			);
 			path = Insurance;
 			sourceTree = "<group>";
@@ -1193,9 +1190,9 @@
 				22FEA0AD24CDD4CA0007CA9C /* FileManager.swift in Sources */,
 				22DBFBE12349362900DE6E92 /* UserPreferences.swift in Sources */,
 				2287753E234A3DF60078CE12 /* TextInputSetting.swift in Sources */,
-				C2C4531729E32AC000C2571A /* Hash3.swift in Sources */,
 				2207B76523145AFD00BA71B5 /* DeleteWorkoutView.swift in Sources */,
 				22BD1F402474638200415A06 /* ApplicationStateObservation.swift in Sources */,
+				C24F07FD29EBAB1F003CC364 /* Hash4.swift in Sources */,
 				22FC085423AFF13E00184E4B /* SetupPermissionView.swift in Sources */,
 				22C1107C24532AE2009ACE81 /* WorkoutMapViewManager.swift in Sources */,
 				22B2A8A3230D350000EF8558 /* RelativeMeasurement.swift in Sources */,
@@ -1213,6 +1210,7 @@
 				22F3318D23AA23DD006CB7E5 /* SetupSwitchView.swift in Sources */,
 				4579A12529D33EA6003F6885 /* WalletView.swift in Sources */,
 				22AB2FB9233CD0EB002EF0DE /* LabelledDiagramViewDelegate.swift in Sources */,
+				C24F07FB29EBAAE8003CC364 /* ClaimInfoHandler.swift in Sources */,
 				2226A3BF240C441700FF7A94 /* TextViewSetting.swift in Sources */,
 				2201531B231677BC00BD79AF /* BurnedEnergyCalculator.swift in Sources */,
 				22F0000D234A2055008CFAD2 /* Setting.swift in Sources */,
@@ -1221,7 +1219,6 @@
 				22B2A8A5230D3B7300EF8558 /* LabelledRelativeDataView.swift in Sources */,
 				22BD1F3E247462FF00415A06 /* ApplicationStateObserver.swift in Sources */,
 				22A0B72E245B07B400E1AB68 /* WorkoutStatsSeriesSection.swift in Sources */,
-				C2C4531529E3297700C2571A /* Hash2.swift in Sources */,
 				2230926124D7081A00A3F636 /* WorkoutBuilder+LocationManagement.swift in Sources */,
 				22877544234A75A10078CE12 /* Units.swift in Sources */,
 				22B6CF7C22CA1675002D2FB0 /* LabelledDataView.swift in Sources */,
@@ -1233,7 +1230,6 @@
 				C2C4530429DFBEF400C2571A /* TestView.swift in Sources */,
 				229186332367909D00929885 /* PolicyViewController.swift in Sources */,
 				22AB2FB1233CA201002EF0DE /* WorkoutMapViewDelegate.swift in Sources */,
-				C2C4531329E30E3500C2571A /* Hash.swift in Sources */,
 				22FEA09224CD38CB0007CA9C /* WorkoutBuilder+AutoPauseDetection.swift in Sources */,
 				22B6CF7622CA0B13002D2FB0 /* UIView.swift in Sources */,
 				221436BF2443746B0010D82B /* Event.swift in Sources */,

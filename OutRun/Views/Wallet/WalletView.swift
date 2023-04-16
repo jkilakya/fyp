@@ -1,6 +1,5 @@
 //
 //  WalletView.swift
-//  trialApp
 //
 //  Created by Ilakya JK on 26/3/2023.
 //
@@ -48,12 +47,12 @@ let data = Data(jsonString.utf8)
 
 print(data)
 
-print("Hash1:----------------------")
-print(Hash().example(text: "{\"name\":\"ilakya\", \"age\":21, \"illness\":\"idk bro\"}"))
-print("Hash2:----------------------")
-print(Hash2().example2(json: data))
-print("Hash3:----------------------")
-print(Hash3().example3(json: data))
+//print("Hash1:----------------------")
+//print(Hash().example(text: "{\"name\":\"ilakya\", \"age\":21, \"illness\":\"idk bro\"}"))
+//print("Hash2:----------------------")
+//print(Hash2().example2(json: data))
+//print("Hash3:----------------------")
+//print(Hash3().example3(json: data))
 //print(Hash2().example2(json: {"name":"ilakya", "age":21, "illness":"idk bro"}))
 
 
