@@ -61,26 +61,6 @@ Arkam has a rich feature set centered around customisation and privacy. The list
 - View detailed statistics
 - Monetize your data and collect crypto rewards
 
-## Translation
 
-Arkam uses [Weblate](https://weblate.org/) as a tool to make translation easier. Once languages are fully translated on said platform they will be added to the project and published to the AppStore.
-
-So far the following languages are supported:
-
-| Language | Translation Status |
-|----------|--------------------|
-| Catalan  | [![ca translation status](https://hosted.weblate.org/widgets/outrun/ca/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/ca/) |
-| Croatian | [![hr translation status](https://hosted.weblate.org/widgets/outrun/hr/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/hr/) |
-| Czech    | [![cs translation status](https://hosted.weblate.org/widgets/outrun/cs/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/cs/) |
-| Danish   | [![da translation status](https://hosted.weblate.org/widgets/outrun/da/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/da/) |
-| Dutch    | [![nl translation status](https://hosted.weblate.org/widgets/outrun/nl/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/nl/) |
-| English  | [![en translation status](https://hosted.weblate.org/widgets/outrun/en/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/en/) |
-| Finnish  | [![fi translation status](https://hosted.weblate.org/widgets/outrun/fi/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/fi/) |
-| French   | [![fr translation status](https://hosted.weblate.org/widgets/outrun/fr/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/fr/) |
-| German   | [![de translation status](https://hosted.weblate.org/widgets/outrun/de/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/de/) |
-| Italian  | [![it translation status](https://hosted.weblate.org/widgets/outrun/it/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/it/) |
-| Polish   | [![pl translation status](https://hosted.weblate.org/widgets/outrun/pl/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/pl/) |
-| Spanish  | [![es translation status](https://hosted.weblate.org/widgets/outrun/es/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/es/) |
-| Swedish  | [![sv translation status](https://hosted.weblate.org/widgets/outrun/sv/svg-badge.svg)](https://hosted.weblate.org/engage/outrun/sv/) |
-
-If you want to add languages or improve already translated ones you can do this [here](https://hosted.weblate.org/engage/outrun/).
+## Credit
+Arkam is based on the work of others in the form of libraries and UI plugins. Some of our developmenthas has also been inspired by the work of Tim Fradrich. 
