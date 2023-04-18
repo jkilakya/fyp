@@ -63,4 +63,4 @@ Arkam has a rich feature set centered around customisation and privacy. The list
 
 
 ## Credit
-Arkam is based on the work of others in the form of libraries and UI plugins. Some of our developmenthas has also been inspired by the work of Tim Fradrich. 
+Arkam is based on the work of others in the form of libraries and UI plugins. Some of our developmenthas has also been inspired by the open-source work of Tim Fradrich. 
